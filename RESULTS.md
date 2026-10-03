@@ -197,3 +197,8 @@ because the shortest texts have 11-13). Full output `examples/proofs_results.txt
 16 works x 2 readers (Qwen, XLM-R), all 5,632 points of a work pooled, random samples of 250/500/1000/2000/3000 points, plus a second draw at 1000.
 Mean over works: Qwen 12.2, 11.6, 11.1, 11.0, 11.0; XLM-R 15.2, 13.3, 12.3, 11.8, 11.8. Two draws at 1000 points differ by 0.9 on average.
 Dimension falls then levels off from about 2000 points; it does not grow with more points. See REPORT.md Result 8.
+
+## Stricter identification test (scripts/honest_test.py, examples/honest_test.txt/.csv)
+Learn on one half of each work (by text position; Poe by tale), guess the other half, both directions; passages within 256 tokens of the split dropped;
+Wilson 95% ranges and Holm-corrected binomial p-values (24 tests). Path distance (Qwen) 58/80/64% (French/English/proofs), all measures together 48/64/32%,
+surprise 55/45/21%, dimension (XLM-R) 35/33/28%. Ranking unchanged against the leave-one-out test; proofs lose most (path distance Qwen 75 to 64%, XLM-R 67 to 45%). See REPORT.md Result 1b.

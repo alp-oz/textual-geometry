@@ -1,0 +1,44 @@
+
+French literature: 110 passages kept (Baudelaire poems 22, Mallarmé poems 22, Beckett L'Innommable 22, Poe tales 22, Rimbaud poems 22); chance 20%
+
+English literature: 86 passages kept (Shakespeare sonnets 20, Shakespeare plays 22, Poe tales 22, Joyce Ulysses 22); chance 25%
+
+Proofs: 146 passages kept (Ramanujan 1918 20, Andrews ch.5 20, Andrews ch.1 20, Euclid 22, Hilbert 22, Dedekind 22, Your paper 20); chance 14%
+
+STRICT TEST: learn on one half of each work, guess passages of the other half (both directions)
+acc = share guessed right; 95% range is the uncertainty from the small number of passages; p = against random guessing,
+corrected for the 24 tests run (Holm). 'old' = the earlier leave-one-out accuracy on the same passages.
+
+French literature  (random guessing 20%, 110 passages tested)
+  measure                     strict     95% range    old   p (corrected)
+  path distance (Qwen)           58%       49%-67%    57%        3.72e-17
+  surprise                       55%       46%-64%    52%        5.26e-15
+  path distance (XLM-R)          53%       43%-62%    58%        5.36e-13
+  all measures together          48%       39%-57%    52%        5.35e-10
+  dimension (XLM-R)              35%       27%-45%    37%          0.0014
+  different words                34%       25%-43%    32%         0.00503
+  step length (Qwen)             33%       25%-42%    32%         0.00926
+  dimension (Qwen)               25%       18%-34%    25%           0.282
+
+English literature  (random guessing 25%, 86 passages tested)
+  measure                     strict     95% range    old   p (corrected)
+  path distance (Qwen)           80%       71%-87%    85%        2.15e-25
+  all measures together          64%       53%-73%    72%        5.36e-13
+  path distance (XLM-R)          63%       52%-72%    65%         2.6e-12
+  surprise                       45%       35%-56%    58%        0.000429
+  step length (Qwen)             42%       32%-52%    47%         0.00501
+  dimension (Qwen)               42%       32%-52%    42%         0.00501
+  dimension (XLM-R)              33%       24%-43%    29%           0.282
+  different words                23%       16%-33%    21%           0.685
+
+Proofs  (random guessing 14%, 146 passages tested)
+  measure                     strict     95% range    old   p (corrected)
+  path distance (Qwen)           64%       56%-71%    75%        4.53e-41
+  path distance (XLM-R)          45%       37%-53%    67%         6.1e-18
+  all measures together          32%       25%-39%    41%        1.42e-06
+  dimension (XLM-R)              28%       21%-36%    27%        0.000161
+  dimension (Qwen)               23%       17%-31%    27%          0.0171
+  step length (Qwen)             23%       17%-30%    30%          0.0274
+  surprise                       21%       15%-28%    27%           0.122
+  different words                18%       13%-26%    21%           0.282
+

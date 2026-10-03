@@ -36,6 +36,27 @@ How often a passage's work is guessed correctly:
 
 Comparing whole paths is by far the best fingerprint. Dimension, our starting point, is one of the weakest.
 
+### Result 1b — The same test, made stricter
+In the table above, a passage's neighbours from the same stretch of text could help the guess. The stricter version splits every work by position:
+the guesser learns from passages of one half and must guess passages of the **other** half, with passages near the split dropped (Poe is split by tale,
+so a tale is never both learned and tested). Same measures, corrected p-values (Holm, 24 tests):
+
+| Measure | French (5 works) | English (4 works) | Proofs (7 works) |
+|---|---|---|---|
+| **Path distance (Qwen)** | **58%** (was 57%) | **80%** (was 85%) | **64%** (was 75%) |
+| Path distance (XLM-R) | 53% (58%) | 63% (65%) | 45% (67%) |
+| Surprise | 55% (52%) | 45% (58%) | 21% (27%), not significant |
+| Step length (Qwen) | 33% (32%) | 42% (47%) | 23% (30%) |
+| Dimension (XLM-R) | 35% (37%) | 33% (29%), not significant | 28% (27%) |
+| Dimension (Qwen) | 25% (25%), not significant | 42% (42%) | 23% (27%) |
+| Different words | 34% (32%) | 23% (21%), not significant | 18% (21%), not significant |
+| *Random guessing* | *20%* | *25%* | *14%* |
+
+(in brackets: the earlier test on the same passages). The ranking does not change: **path distance with Qwen stays best in all three families**, and dimension stays weak.
+What did change: the proofs lost the most (path distance 75% to 64% with Qwen, 67% to 45% with XLM-R), so part of the earlier proof result came from
+neighbouring passages resembling each other. The 95% ranges are about ±8 points (full list in `examples/honest_test.txt`). They assume passages are independent,
+which is not quite true, so treat them as slightly optimistic.
+
 ## Result 2 — Dimension mostly reflects vocabulary, and depends on how many points you use
 * With no reading at all (input table), a passage's dimension is almost the same as its number of different words (correlation 0.97).
 * The estimate **does not grow with more points; it falls and levels off**. Same passages, XLM-R, sonnets: 25.7 (64 points), 20.2 (128), 15.2 (256).
@@ -115,10 +136,10 @@ Per-work numbers: `examples/pooled_dimension.csv`.
 | Not done | how often the path returns to a place; dimension layer by layer | possible next steps |
 
 ## What we cannot conclude
-* Only 22 passages per work (10 in the prose-only version of the proofs); passages of one work resemble each other, so the guessing rates are somewhat optimistic.
+* Only 22 passages per work (10 in the prose-only version of the proofs); passages of one work resemble each other, so the guessing rates of Result 1 are optimistic. Result 1b removes the largest part of that, and its numbers are the ones to quote.
 * The works differ in topic (geometry, number theory, logic), which affects vocabulary.
 * Some texts come from scans or conversions with garbled formulas (the 1918 paper, Andrews); texts from LaTeX have gaps where formulas were removed.
-* p-values are not corrected for the many comparisons made.
+* The p-values of Result 1b are corrected for the 24 tests run; the p-values quoted in Results 6 and 7 are not.
 * Nothing here measures quality, depth or creativity; it shows only where the model places the words.
 * Tried and dropped: feeding each word alone to the model (the "first-token" idea). With XLM-R it collapses (all words almost identical); with Qwen it never beat the other methods.
 
