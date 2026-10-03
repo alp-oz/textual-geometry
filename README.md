@@ -28,7 +28,8 @@ the text and is kept as the baseline.
 > "first position" effect); it carried some signal beyond the input table in English literature (step length: 0.46 of the
 > variance explained vs 0.24 for the table; path-distance gap 0.044 vs 0.015) but never beat the contextual Qwen track.
 > Because it never improved on the other tracks and complicates the comparison, it is not used in later tests; the early
-> results (`examples/tracks_results.txt`) still contain it for the record.
+> results (`examples/tracks_results.txt`) still contain it for the record. The full 6-group comparison of lone-token
+> vectors, input table and contextual vectors is in `examples/lone_results.txt` (code: `scripts/run_lone.py`, `scripts/analyze_lone.py`).
 
 ### Track 1 – contextual, running through the text (Qwen2.5-0.5B)
 The model reads the text left to right. After each token it has a state (a vector) that summarises everything read so far

@@ -1,0 +1,108 @@
+COLLAPSE CHECK for lone-token vectors (all distinct tokens seen in the windows)
+  mean_cos = average cosine between two different tokens' vectors (1 = all alike);
+  partic_ratio = effective number of directions the vectors use
+model     label  n_distinct_tokens  mean_norm  sd_norm  mean_cos  partic_ratio
+XLM-R      lone               3987     19.157    0.114     0.986         4.901
+XLM-R lone_bare               3987     18.723    0.000     1.000         1.378
+ Qwen      lone               4317    241.798   26.160     0.513        10.563
+ Qwen lone_bare               4317    241.798   26.160     0.513        10.563
+
+==============================================================================================================
+XLM-R   (dimension, mean ± sd over windows; 22+ windows per group, 128 points each)
+
+group                                      table          lone     lone_bare       context      shuffled  distinct tok
+Shakespeare sonnets                   11.7 ± 2.4     6.9 ± 0.9     1.8 ± 0.1    17.4 ± 3.3    19.6 ± 3.4            91
+Shakespeare plays                     11.8 ± 3.4     6.4 ± 1.2     1.8 ± 0.1    16.3 ± 4.3    17.9 ± 3.5            88
+Baudelaire poems                      15.6 ± 4.6     7.7 ± 1.0     1.9 ± 0.1    18.0 ± 3.7    28.4 ±13.7            97
+Mallarmé poems                        17.4 ± 5.8     8.7 ± 1.8     1.9 ± 0.1    22.3 ± 9.2    27.8 ± 8.1            98
+Poe tales (English)                   12.8 ± 2.9     6.7 ± 1.1     1.9 ± 0.1    18.4 ± 4.3    21.5 ± 3.0            91
+Poe tales (French, Baudelaire)        11.0 ± 4.4     6.2 ± 1.7     1.8 ± 0.1    14.3 ± 5.1    19.2 ± 5.2            84
+
+  same, dimension of DISTINCT tokens only (removes duplicate points)
+  Shakespeare sonnets                 1788.6          26.2           2.0          16.5          20.1      
+  Shakespeare plays                    738.0          23.2           2.1          16.1          19.2      
+  Baudelaire poems                     275.7          25.7           2.1          18.0          25.4      
+  Mallarmé poems                       404.2          25.5           2.1          20.6          25.9      
+  Poe tales (English)                  380.8          29.0           2.1          18.2          21.5      
+  Poe tales (French, Baudelaire)       546.2          19.8           2.0          15.4          20.3      
+
+SHARE OF VARIANCE EXPLAINED BY GROUP INSIDE EACH FAMILY (0 = none, 1 = all)
+  family                                  table       lone  lone_bare    context   shuffled
+  A. Same stories, two languages           0.06       0.04       0.07       0.16       0.07
+  B. French literature                     0.24       0.32       0.10       0.21       0.16
+  C. English literature                    0.03       0.04       0.05       0.05       0.17
+
+DO THE VERSIONS AGREE? window-by-window rank correlation of dimension
+                    table       lone  lone_bare    context   shuffled
+  table             +1.00      +0.80      +0.34      +0.80      +0.65
+  lone              +0.80      +1.00      +0.27      +0.70      +0.66
+  lone_bare         +0.34      +0.27      +1.00      +0.26      +0.42
+  context           +0.80      +0.70      +0.26      +1.00      +0.51
+  shuffled          +0.65      +0.66      +0.42      +0.51      +1.00
+
+  confound: corr(dimension, number of distinct tokens)   table +0.89   context +0.74
+
+ORDER OF GROUP MEANS (high -> low)
+  table      Mallarmé poems 17.4 > Baudelaire poems 15.6 > Poe tales 12.8 > Shakespeare plays 11.8 > Shakespeare sonnets 11.7 > Poe tales 11.0
+  lone       Mallarmé poems 8.7 > Baudelaire poems 7.7 > Shakespeare sonnets 6.9 > Poe tales 6.7 > Shakespeare plays 6.4 > Poe tales 6.2
+  lone_bare  Baudelaire poems 1.9 > Mallarmé poems 1.9 > Poe tales 1.9 > Shakespeare plays 1.8 > Shakespeare sonnets 1.8 > Poe tales 1.8
+  context    Mallarmé poems 22.3 > Poe tales 18.4 > Baudelaire poems 18.0 > Shakespeare sonnets 17.4 > Shakespeare plays 16.3 > Poe tales 14.3
+  shuffled   Baudelaire poems 28.4 > Mallarmé poems 27.8 > Poe tales 21.5 > Shakespeare sonnets 19.6 > Poe tales 19.2 > Shakespeare plays 17.9
+
+SHUFFLE EFFECT on contextual dimension (context minus shuffled, per group)
+  Shakespeare sonnets                -2.26
+  Shakespeare plays                  -1.67
+  Baudelaire poems                   -10.36
+  Mallarmé poems                     -5.44
+  Poe tales (English)                -3.10
+  Poe tales (French, Baudelaire)     -4.87
+
+==============================================================================================================
+Qwen   (dimension, mean ± sd over windows; 22+ windows per group, 128 points each)
+
+group                                      table          lone     lone_bare       context      shuffled  distinct tok
+Shakespeare sonnets                   11.2 ± 2.8     5.5 ± 0.8     5.5 ± 0.8     9.6 ± 0.9    15.3 ± 4.0            94
+Shakespeare plays                     10.3 ± 2.5     5.1 ± 0.6     5.1 ± 0.6     9.0 ± 1.3    12.7 ± 3.0            91
+Baudelaire poems                      15.8 ± 3.4     6.6 ± 0.6     6.6 ± 0.6    10.7 ± 1.3    13.2 ± 1.8           101
+Mallarmé poems                        15.6 ± 3.7     6.4 ± 0.8     6.4 ± 0.8    10.4 ± 1.0    13.2 ± 1.9           101
+Poe tales (English)                   11.1 ± 2.3     5.2 ± 0.5     5.2 ± 0.5    10.1 ± 0.9    13.1 ± 2.7            91
+Poe tales (French, Baudelaire)        12.0 ± 5.2     5.7 ± 1.6     5.7 ± 1.6    12.4 ± 3.8    14.3 ± 3.4            90
+
+  same, dimension of DISTINCT tokens only (removes duplicate points)
+  Shakespeare sonnets                  630.4          12.2          12.2           9.7          16.3      
+  Shakespeare plays                    339.6          11.0          11.0           9.0          13.2      
+  Baudelaire poems                   28437.1          13.6          13.6          11.1          15.1      
+  Mallarmé poems                       294.1          13.1          13.1          10.5          17.5      
+  Poe tales (English)                  471.3          12.1          12.1          10.6          13.0      
+  Poe tales (French, Baudelaire)       511.9          12.2          12.2          12.1          14.1      
+
+SHARE OF VARIANCE EXPLAINED BY GROUP INSIDE EACH FAMILY (0 = none, 1 = all)
+  family                                  table       lone  lone_bare    context   shuffled
+  A. Same stories, two languages           0.01       0.05       0.05       0.15       0.04
+  B. French literature                     0.16       0.10       0.10       0.12       0.04
+  C. English literature                    0.03       0.08       0.08       0.15       0.11
+
+DO THE VERSIONS AGREE? window-by-window rank correlation of dimension
+                    table       lone  lone_bare    context   shuffled
+  table             +1.00      +0.89      +0.89      +0.51      +0.27
+  lone              +0.89      +1.00      +1.00      +0.62      +0.32
+  lone_bare         +0.89      +1.00      +1.00      +0.62      +0.32
+  context           +0.51      +0.62      +0.62      +1.00      +0.28
+  shuffled          +0.27      +0.32      +0.32      +0.28      +1.00
+
+  confound: corr(dimension, number of distinct tokens)   table +0.94   context +0.52
+
+ORDER OF GROUP MEANS (high -> low)
+  table      Baudelaire poems 15.8 > Mallarmé poems 15.6 > Poe tales 12.0 > Shakespeare sonnets 11.2 > Poe tales 11.1 > Shakespeare plays 10.3
+  lone       Baudelaire poems 6.6 > Mallarmé poems 6.4 > Poe tales 5.7 > Shakespeare sonnets 5.5 > Poe tales 5.2 > Shakespeare plays 5.1
+  lone_bare  Baudelaire poems 6.6 > Mallarmé poems 6.4 > Poe tales 5.7 > Shakespeare sonnets 5.5 > Poe tales 5.2 > Shakespeare plays 5.1
+  context    Poe tales 12.4 > Baudelaire poems 10.7 > Mallarmé poems 10.4 > Poe tales 10.1 > Shakespeare sonnets 9.6 > Shakespeare plays 9.0
+  shuffled   Shakespeare sonnets 15.3 > Poe tales 14.3 > Baudelaire poems 13.2 > Mallarmé poems 13.2 > Poe tales 13.1 > Shakespeare plays 12.7
+
+SHUFFLE EFFECT on contextual dimension (context minus shuffled, per group)
+  Shakespeare sonnets                -5.70
+  Shakespeare plays                  -3.70
+  Baudelaire poems                   -2.53
+  Mallarmé poems                     -2.81
+  Poe tales (English)                -2.99
+  Poe tales (French, Baudelaire)     -1.91
