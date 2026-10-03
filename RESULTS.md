@@ -2,7 +2,7 @@
 
 Patient = one text unit (poem / sonnet / 1200-char window) cut to its first L=96 tokens; path = its 96
 XLM-RoBERTa-base token embeddings. N = 80 patients per group (Mallarmé 58). Script: `scripts/run_metrics.py`,
-raw output `metrics_results.json`. Groups: Shakespeare sonnets and plays, Baudelaire (Les Fleurs du mal),
+raw output `examples/early/metrics_results.json`. Groups: Shakespeare sonnets and plays, Baudelaire (Les Fleurs du mal),
 Mallarmé (Poésies), Beckett (L'Innommable, FR), Ramanujan proof (Andrews ch. 5), other math (Andrews ch. 1, 13).
 
 ## Caveats first
@@ -29,7 +29,7 @@ Mallarmé (Poésies), Beckett (L'Innommable, FR), Ramanujan proof (Andrews ch. 5
   La Vie antérieure 0.16, Les Chats 0.65, Élévation 0.90; Mallarmé Brise marine 0.76, Hérodiade 0.74,
   Don du poème 0.83, Sainte 0.86, Sonnet en -yx 0.62. Mallarmé's symbolic poems sit toward the periphery of his group; no such pattern for Baudelaire.
 
-## Trajectories (causal LM, Qwen2.5-0.5B): `scripts/run_trajectory.py`, `trajectory_results.csv`
+## Trajectories (causal LM, Qwen2.5-0.5B): `scripts/run_trajectory.py`, `examples/early/trajectory_results.csv`
 Each text = path of 128 token states (state after reading k tokens; token 0 dropped). 80 texts per group (Mallarmé 52).
 Dimension of the first k points of the path (Steele/MST): estimates at k=32 are unreliable (too few points).
 
@@ -47,7 +47,7 @@ Straightness (net displacement / path length) is ~0.01 for all groups: the path 
 Consecutive steps tend to reverse (cos ≈ -0.4). Math has the lowest dimension and shortest steps.
 Ramanujan ch.5 vs other math: no difference (dim p=0.17); ch.5 vs Beckett: dim p=1e-7.
 
-## Shuffle control (words shuffled within each text; same texts, `--shuffle`, `trajectory_results_shuffled.csv`)
+## Shuffle control (words shuffled within each text; same texts, `--shuffle`, `examples/early/trajectory_results_shuffled.csv`)
 Mean over paired texts, original -> shuffled (522 pairs):
 
 | group | dim@128 | mean step | straightness | turn cos |

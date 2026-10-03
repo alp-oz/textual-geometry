@@ -1,6 +1,6 @@
 """Token-by-token trajectories from a causal LM; per-text geometry features.
 
-    python scripts/run_trajectory.py --out trajectory_results.csv
+    python scripts/run_trajectory.py --out examples/early/trajectory_results.csv
 """
 import argparse
 import sys
@@ -20,7 +20,7 @@ def main():
     ap.add_argument("--model", default="Qwen/Qwen2.5-0.5B")
     ap.add_argument("--L", type=int, default=128)
     ap.add_argument("--n-max", type=int, default=80)
-    ap.add_argument("--out", default="trajectory_results.csv")
+    ap.add_argument("--out", default="examples/early/trajectory_results.csv")
     ap.add_argument("--shuffle", action="store_true", help="control: shuffle the words within each text")
     ap.add_argument("--save-traj", default=None, help="npz path for the raw trajectories")
     a = ap.parse_args()

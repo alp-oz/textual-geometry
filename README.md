@@ -87,5 +87,12 @@ python scripts/run_tracks.py --n 22 --out-dir out/tracks          # tracks, all 
 python scripts/run_tracks.py --n 22 --shuffle --out-dir out/tracks_shuf
 python scripts/analyze_tracks.py out/tracks out/tracks_shuf
 ```
-Data: `data/<author>/*.txt`. Beckett and Andrews are copyrighted and git-ignored; supply your own copy.
+## Data
+Texts go in `data/<author>/*.txt`. **Included in the repository** (public domain): Shakespeare, Baudelaire, Mallarmé, Rimbaud,
+Poe's tales in English and in Baudelaire's French translation (fetched by the `scripts/fetch_*.py` scripts).
+**Not included** (copyright, or private; git-ignored, so supply your own copy to rerun those parts): Beckett *L'Innommable*,
+Andrews' *The Theory of Partitions*, Joyce *Ulysses*, Euclid (Casey), Hilbert, Dedekind, the 1918 Hardy–Ramanujan paper
+(`data/proofs_raw/`, `data/prose/`) and the author's own paper (`data/user/`). The per-passage numbers for all works are in `examples/`.
+
+Licence: MIT (code). The texts keep their own status.
 Earlier experiments (unmatched, Qwen-only, XLM-R-only, static table) are in `RESULTS.md` and `examples/`.

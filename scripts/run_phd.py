@@ -1,6 +1,6 @@
 """Compute PHD per chunk for each text file under data/<author>/*.txt.
 
-    python scripts/run_phd.py --data data --out results.csv
+    python scripts/run_phd.py --data data --out examples/early/results.csv
 """
 import argparse
 import csv
@@ -15,7 +15,7 @@ from textgeom.embed import Embedder
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="data")
-    ap.add_argument("--out", default="results.csv")
+    ap.add_argument("--out", default="examples/early/results.csv")
     ap.add_argument("--model", default="xlm-roberta-base")
     ap.add_argument("--chunk", type=int, default=256)
     ap.add_argument("--max-chunks", type=int, default=100, help="per file")
