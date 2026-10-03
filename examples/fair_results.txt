@@ -1,0 +1,78 @@
+EVERY GROUP: 60 windows x 128 tokens
+
+group                                n        dimension      step length          spread        surprise
+Shakespeare sonnets                 60       10.9 ± 1.2      199.6 ± 3.3     157.2 ± 3.0      4.39 ±0.17
+Shakespeare plays                   60        9.2 ± 0.5      211.6 ± 3.0     176.3 ± 3.0      4.19 ±0.11
+Baudelaire poems                    60       11.3 ± 0.5      248.7 ± 2.3     183.5 ± 1.3      3.70 ±0.06
+Mallarmé poems                      60       11.0 ± 0.4      242.3 ± 2.5     180.2 ± 1.4      4.21 ±0.09
+Beckett L'Innommable                60       10.3 ± 0.5      224.4 ± 3.0     174.9 ± 2.1      3.15 ±0.08
+Ramanujan proof (Andrews ch.5)      60        8.9 ± 0.4      182.7 ± 6.1     158.0 ± 4.9      3.34 ±0.21
+Math ch.1 (elementary)              60        8.5 ± 0.4      190.1 ± 4.1     162.2 ± 4.0      2.66 ±0.16
+Math ch.13 (combinatorics)          60        8.6 ± 0.5      181.4 ± 5.7     154.7 ± 5.5      2.91 ±0.19
+Poe tales (English)                 60       10.7 ± 0.4      213.4 ± 2.7     173.9 ± 2.1      3.58 ±0.09
+Poe tales (French, Baudelaire)      60       11.5 ± 0.7      230.8 ± 3.0     182.3 ± 1.7      3.05 ±0.08
+
+WITHIN-FAMILY TESTS (Mann-Whitney p; effect = difference of group means)
+
+A. Same stories, two languages
+  Poe tales (English) vs Poe tales (French, Baudelaire): dimension -0.82 (p=0.026); step -17.43 (p=8.6e-14); surprise +0.52 (p=4.7e-12)
+
+B. French literature
+  Baudelaire poems vs Mallarmé poems: dimension +0.30 (p=0.5); step +6.41 (p=0.00055); surprise -0.51 (p=1.6e-12)
+  Baudelaire poems vs Beckett L'Innommable: dimension +1.09 (p=0.0079); step +24.27 (p=3.2e-16); surprise +0.55 (p=1.8e-14)
+  Baudelaire poems vs Poe tales (French, Baudelaire): dimension -0.14 (p=0.45); step +17.90 (p=1.3e-14); surprise +0.65 (p=4.4e-16)
+  Mallarmé poems vs Beckett L'Innommable: dimension +0.79 (p=0.022); step +17.86 (p=7.3e-12); surprise +1.06 (p=1.5e-20)
+  Mallarmé poems vs Poe tales (French, Baudelaire): dimension -0.44 (p=0.16); step +11.50 (p=1.6e-08); surprise +1.16 (p=2.7e-20)
+  Beckett L'Innommable vs Poe tales (French, Baudelaire): dimension -1.23 (p=0.0049); step -6.36 (p=0.00065); surprise +0.10 (p=0.042)
+
+C. English literature
+  Shakespeare sonnets vs Shakespeare plays: dimension +1.74 (p=0.00023); step -11.94 (p=2e-08); surprise +0.20 (p=0.0015)
+  Shakespeare sonnets vs Poe tales (English): dimension +0.25 (p=0.024); step -13.76 (p=5.6e-11); surprise +0.81 (p=2.4e-16)
+  Shakespeare plays vs Poe tales (English): dimension -1.50 (p=5.8e-07); step -1.82 (p=0.69); surprise +0.61 (p=9.5e-11)
+
+D. English math
+  Ramanujan proof (Andrews ch.5) vs Math ch.1 (elementary): dimension +0.40 (p=0.39); step -7.31 (p=0.063); surprise +0.68 (p=1.2e-05)
+  Ramanujan proof (Andrews ch.5) vs Math ch.13 (combinatorics): dimension +0.32 (p=0.31); step +1.38 (p=0.66); surprise +0.43 (p=0.0059)
+  Math ch.1 (elementary) vs Math ch.13 (combinatorics): dimension -0.07 (p=0.94); step +8.69 (p=0.0044); surprise -0.25 (p=0.067)
+
+CENTRE DISTANCES (average of all token points of a group) - same family only
+
+A. Same stories, two languages
+  Poe tales (English) <-> Poe tales (French, Baudelaire): 180
+
+B. French literature
+  Baudelaire poems <-> Mallarmé poems: 27
+  Baudelaire poems <-> Beckett L'Innommable: 48
+  Baudelaire poems <-> Poe tales (French, Baudelaire): 51
+  Mallarmé poems <-> Beckett L'Innommable: 54
+  Mallarmé poems <-> Poe tales (French, Baudelaire): 60
+  Beckett L'Innommable <-> Poe tales (French, Baudelaire): 58
+
+C. English literature
+  Shakespeare sonnets <-> Shakespeare plays: 50
+  Shakespeare sonnets <-> Poe tales (English): 68
+  Shakespeare plays <-> Poe tales (English): 54
+
+D. English math
+  Ramanujan proof (Andrews ch.5) <-> Math ch.1 (elementary): 31
+  Ramanujan proof (Andrews ch.5) <-> Math ch.13 (combinatorics): 26
+  Math ch.1 (elementary) <-> Math ch.13 (combinatorics): 23
+
+PATH DISTANCES between windows (DTW, Frechet, Procrustes); mean within the same group vs mean to windows of the other group(s) of the family
+
+B. French literature
+  dtw        within - between = -1.5e+03  (shuffle p = 0.000; negative = same-work windows are closer)
+  frechet    within - between = -3.71  (shuffle p = 0.000; negative = same-work windows are closer)
+  procrustes within - between = -0.00184  (shuffle p = 0.000; negative = same-work windows are closer)
+
+C. English literature
+  dtw        within - between = -2.21e+03  (shuffle p = 0.000; negative = same-work windows are closer)
+  frechet    within - between = -7.18  (shuffle p = 0.000; negative = same-work windows are closer)
+  procrustes within - between = -0.00368  (shuffle p = 0.000; negative = same-work windows are closer)
+
+D. English math
+  dtw        within - between = -241  (shuffle p = 0.000; negative = same-work windows are closer)
+  frechet    within - between = +0.0145  (shuffle p = 0.465; negative = same-work windows are closer)
+  procrustes within - between = -0.000115  (shuffle p = 0.315; negative = same-work windows are closer)
+
+LANGUAGE CONTROL: DTW between a window and the translation of the SAME passage: 42350; to translations of OTHER passages: 42447  (Mann-Whitney p=0.36)

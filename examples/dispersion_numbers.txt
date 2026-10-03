@@ -1,0 +1,20 @@
+PCA fitted on 1499 tokens per group; PC1 22%, PC2 18% of variance
+share of all variance explained by which group a token belongs to (full space): 26%
+
+group                              tokens texts  spread  dist of centre to overall centre  mean PC1
+Shakespeare sonnets                 23058   154     164                               118      46.7
+Baudelaire poems                    42482   106     187                               103       8.8
+Mallarmé poems                      16174    64     182                                95      10.2
+Shakespeare Hamlet (opening)         1499     1     203                                99       8.2
+Beckett L'Innommable (opening)       1499     1     182                               115      24.3
+Ramanujan proof (Andrews ch.5)       1499     1     189                               103     -19.5
+Other math (Andrews ch.1)            1499     1     153                               135     -76.9
+
+distance between group centres (full space):
+Shakespeare sonnets              0   195   187    98   209   135   194
+Baudelaire poems               195     0    32   180    55   197   213
+Mallarmé poems                 187    32     0   175    63   188   206
+Shakespeare Hamlet (opening)    98   180   175     0   189   126   171
+Beckett L'Innommable (openin   209    55    63   189     0   205   222
+Ramanujan proof (Andrews ch.   135   197   188   126   205     0    96
+Other math (Andrews ch.1)      194   213   206   171   222    96     0

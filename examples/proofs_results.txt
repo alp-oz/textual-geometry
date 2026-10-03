@@ -1,0 +1,84 @@
+============================================================================================================== 
+VERSION: proofs_raw   (22 passages of 256 tokens per work, 7 works, chance = 14%)
+
+                                                         different surprise           dimension           step length
+                                                             words   (Qwen)      Qwen     XLM-R       Qwen      XLM-R
+Andrews ch.1 (simple modern proof)                             126     2.46       9.2       9.6        194       4.45
+Andrews ch.5 (modern retelling of the same proof)              135     3.21       9.2      11.6        184       4.37
+Dedekind (1888)                                                118     2.79       8.4      10.3        183       4.57
+Euclid (ancient)                                               108     2.19       9.0       7.6        195       4.60
+Hilbert (1899)                                                 123     2.50       9.4      10.4        186       4.51
+Ramanujan 1918 (Hardy-Ramanujan paper)                         140     3.46       9.7      12.4        165       4.22
+Your paper                                                     143     3.12      11.1      12.1        179       4.16
+
+HOW OFTEN CAN WE GUESS THE WORK FROM A HIDDEN PASSAGE?
+  all three               Qwen:  37%  XLM-R:  32%  Qwen table:  47%  XLM-R table:  38%
+  dimension               Qwen:  29%  XLM-R:  25%  Qwen table:  25%  XLM-R table:  23%
+  spread                  Qwen:  23%  XLM-R:  25%  Qwen table:  23%  XLM-R table:  21%
+  step length             Qwen:  30%  XLM-R:  21%  Qwen table:  22%  XLM-R table:  23%
+  path distance (DTW)     Qwen:  76%  XLM-R:  64%  Qwen table:  78%  XLM-R table:  61%
+  different words          21%      surprise (Qwen):  27%
+
+WHICH WORKS ARE RECOGNISED (all measures together: 42% right overall)
+   Andrews ch.1 (simple modern proof)                        32%
+   Andrews ch.5 (modern retelling of the same proof)          9%
+   Dedekind (1888)                                           32%
+   Euclid (ancient)                                          59%
+   Hilbert (1899)                                            14%
+   Ramanujan 1918 (Hardy-Ramanujan paper)                    59%
+   Your paper                                                91%
+   most common mix-ups: [('Andrews ch.5', 'Ramanujan 1918', 8), ('Hilbert', 'Your paper', 7), ('Andrews ch.1', 'Euclid', 6), ('Euclid', 'Andrews ch.1', 6)]
+
+RAMANUJAN 1918 vs EACH OTHER PROOF (difference of means; Mann-Whitney p):
+   vs Andrews ch.1          dim Qwen +0.57 (p=0.11); dim XLM-R +2.80 (p=0.00031); step -29.01 (p=1.3e-06); surprise +1.00 (p=7e-06); diff. words +14.77 (p=0.012)
+   vs Andrews ch.5          dim Qwen +0.52 (p=0.16); dim XLM-R +0.80 (p=0.37); step -19.01 (p=0.004); surprise +0.26 (p=0.25); diff. words +5.14 (p=0.56)
+   vs Dedekind              dim Qwen +1.32 (p=0.0072); dim XLM-R +2.03 (p=0.0077); step -18.56 (p=0.0032); surprise +0.68 (p=0.00034); diff. words +22.59 (p=0.0027)
+   vs Euclid                dim Qwen +0.74 (p=0.15); dim XLM-R +4.80 (p=5.4e-07); step -30.62 (p=3.7e-07); surprise +1.28 (p=1.2e-07); diff. words +32.32 (p=1e-05)
+   vs Hilbert               dim Qwen +0.36 (p=0.68); dim XLM-R +1.99 (p=0.025); step -21.83 (p=2.2e-06); surprise +0.96 (p=2.2e-06); diff. words +17.50 (p=0.013)
+   vs Your paper            dim Qwen -1.36 (p=0.00024); dim XLM-R +0.33 (p=0.66); step -14.87 (p=9.3e-05); surprise +0.35 (p=0.012); diff. words -2.32 (p=0.95)
+
+WHICH WORKS IS 'YOUR PAPER' CLOSEST TO? (mean path distance DTW from your passages to the passages of each work; smaller = closer)
+   Qwen  : Dedekind 62,098 < Hilbert 63,085 < Ramanujan 1918 63,353 < Euclid 65,179 < Andrews ch.1 65,673 < Andrews ch.5 67,960
+   XLM-R : Hilbert 1,191 < Ramanujan 1918 1,191 < Euclid 1,202 < Dedekind 1,210 < Andrews ch.1 1,225 < Andrews ch.5 1,226
+============================================================================================================== 
+VERSION: proofs_prose   (10 passages of 256 tokens per work, 7 works, chance = 14%)
+
+                                                         different surprise           dimension           step length
+                                                             words   (Qwen)      Qwen     XLM-R       Qwen      XLM-R
+Andrews ch.1 (simple modern proof)                             142     2.91      10.4      11.0        199       4.32
+Andrews ch.5 (modern retelling of the same proof)              145     3.18      10.8      13.6        212       4.21
+Dedekind (1888)                                                128     3.02      10.5      12.1        182       4.28
+Euclid (ancient)                                               121     2.93      11.0      11.1        181       4.16
+Hilbert (1899)                                                 131     2.71      10.3      11.2        191       4.31
+Ramanujan 1918 (Hardy-Ramanujan paper)                         148     3.36      12.0      16.1        175       4.05
+Your paper                                                     136     3.09      11.6      12.9        176       4.17
+
+HOW OFTEN CAN WE GUESS THE WORK FROM A HIDDEN PASSAGE?
+  all three               Qwen:  33%  XLM-R:  31%  Qwen table:  49%  XLM-R table:  34%
+  dimension               Qwen:  14%  XLM-R:  27%  Qwen table:  27%  XLM-R table:  19%
+  spread                  Qwen:  24%  XLM-R:  20%  Qwen table:  43%  XLM-R table:  34%
+  step length             Qwen:  29%  XLM-R:  19%  Qwen table:  31%  XLM-R table:  26%
+  path distance (DTW)     Qwen:  71%  XLM-R:  47%  Qwen table:  59%  XLM-R table:  63%
+  different words          30%      surprise (Qwen):  19%
+
+WHICH WORKS ARE RECOGNISED (all measures together: 46% right overall)
+   Andrews ch.1 (simple modern proof)                        40%
+   Andrews ch.5 (modern retelling of the same proof)         60%
+   Dedekind (1888)                                           20%
+   Euclid (ancient)                                          20%
+   Hilbert (1899)                                            40%
+   Ramanujan 1918 (Hardy-Ramanujan paper)                    90%
+   Your paper                                                50%
+   most common mix-ups: [('Andrews ch.1', 'Hilbert', 3), ('Dedekind', 'Your paper', 3), ('Hilbert', 'Dedekind', 3), ('Andrews ch.1', 'Andrews ch.5', 2)]
+
+RAMANUJAN 1918 vs EACH OTHER PROOF (difference of means; Mann-Whitney p):
+   vs Andrews ch.1          dim Qwen +1.62 (p=0.017); dim XLM-R +5.07 (p=0.00077); step -24.15 (p=0.00033); surprise +0.45 (p=0.017); diff. words +5.80 (p=0.19)
+   vs Andrews ch.5          dim Qwen +1.25 (p=0.34); dim XLM-R +2.48 (p=0.064); step -37.74 (p=0.00018); surprise +0.18 (p=0.79); diff. words +3.00 (p=0.38)
+   vs Dedekind              dim Qwen +1.51 (p=0.038); dim XLM-R +3.95 (p=0.0058); step -7.50 (p=0.27); surprise +0.34 (p=0.038); diff. words +20.00 (p=0.041)
+   vs Euclid                dim Qwen +0.99 (p=0.21); dim XLM-R +4.92 (p=0.0073); step -6.36 (p=0.21); surprise +0.44 (p=0.021); diff. words +27.20 (p=0.015)
+   vs Hilbert               dim Qwen +1.71 (p=0.017); dim XLM-R +4.85 (p=0.00018); step -16.77 (p=0.0013); surprise +0.65 (p=0.00025); diff. words +17.20 (p=0.0022)
+   vs Your paper            dim Qwen +0.38 (p=0.57); dim XLM-R +3.16 (p=0.0046); step -1.16 (p=0.91); surprise +0.27 (p=0.064); diff. words +11.70 (p=0.023)
+
+WHICH WORKS IS 'YOUR PAPER' CLOSEST TO? (mean path distance DTW from your passages to the passages of each work; smaller = closer)
+   Qwen  : Dedekind 57,575 < Ramanujan 1918 57,793 < Hilbert 58,974 < Andrews ch.1 59,256 < Euclid 61,029 < Andrews ch.5 63,153
+   XLM-R : Ramanujan 1918 1,126 < Euclid 1,135 < Hilbert 1,147 < Dedekind 1,153 < Andrews ch.1 1,161 < Andrews ch.5 1,162

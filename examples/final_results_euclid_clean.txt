@@ -1,0 +1,113 @@
+==================================================================================================== 
+A. THE GROUPS (22 passages of 256 tokens each). Means per work:
+   'different words' = how many different tokens a passage uses; 'surprise' = how unpredictable the text is for Qwen
+
+French literature
+                                                     different surprise           dimension           step length
+                                                         words   (Qwen)      Qwen     XLM-R       Qwen      XLM-R
+Baudelaire poems                                           178     3.44      10.7      16.5        250       4.30
+Mallarmé poems                                             181     3.95      10.4      19.2        242       4.18
+Beckett L'Innommable                                       153     2.92      10.5      11.9        228       4.35
+Poe tales (French, Baudelaire)                             140     2.58      10.6      12.2        234       4.63
+Rimbaud poems                                              174     3.70      10.0      15.3        241       4.26
+
+English literature
+                                                     different surprise           dimension           step length
+                                                         words   (Qwen)      Qwen     XLM-R       Qwen      XLM-R
+Shakespeare sonnets                                        163     4.13      10.3      14.9        199       4.20
+Shakespeare plays                                          159     3.96       8.6      13.3        217       4.15
+Poe tales (English)                                        157     3.33      11.2      15.8        210       4.00
+Joyce Ulysses                                              164     4.27      10.5      15.8        213       4.02
+
+Proofs (math)
+                                                     different surprise           dimension           step length
+                                                         words   (Qwen)      Qwen     XLM-R       Qwen      XLM-R
+Ramanujan 1918 (original)                                  138     3.43       8.6      11.2        172       4.29
+Andrews ch.5 (modern retelling of the same proof)          132     3.16       8.7      11.1        181       4.42
+Andrews ch.1 (simple modern proof)                         123     2.49       8.8       9.4        192       4.45
+Euclid (ancient)                                           114     2.36       9.0       8.7        199       4.51
+
+ ==================================================================================================== 
+B. HIDE WHICH WORK A PASSAGE COMES FROM; HOW OFTEN CAN WE GUESS IT?  (chance = 1 / number of works)
+chance: {'French literature': '20%', 'English literature': '25%', 'Proofs (math)': '25%'}
+
+WHICH MODEL (dimension + spread + step length together)
+                                       French literature  English literature       Proofs (math)
+Qwen - all three                                     37%                 62%                 39%
+XLM-R - all three                                    46%                 25%                 43%
+Qwen table - all three                               55%                 50%                 47%
+XLM-R table - all three                              33%                 38%                 44%
+
+WHICH MEASURE - dimension
+                                       French literature  English literature       Proofs (math)
+Qwen - dimension                                     25%                 50%                 32%
+XLM-R - dimension                                    37%                 27%                 34%
+Qwen table - dimension                               36%                 36%                 30%
+XLM-R table - dimension                              34%                 30%                 36%
+
+spread
+                                       French literature  English literature       Proofs (math)
+Qwen - spread                                        31%                 50%                 31%
+XLM-R - spread                                       37%                 28%                 33%
+Qwen table - spread                                  35%                 48%                 33%
+XLM-R table - spread                                 29%                 32%                 33%
+
+step length
+                                       French literature  English literature       Proofs (math)
+Qwen - step length                                   32%                 44%                 41%
+XLM-R - step length                                  32%                 36%                 38%
+Qwen table - step length                             30%                 45%                 38%
+XLM-R table - step length                            30%                 32%                 35%
+
+path distance between passages (DTW)
+                                       French literature  English literature       Proofs (math)
+Qwen - path distance (DTW)                           57%                 85%                 70%
+XLM-R - path distance (DTW)                          58%                 69%                 61%
+Qwen table - path distance (DTW)                     57%                 57%                 64%
+XLM-R table - path distance (DTW)                    30%                 67%                 69%
+
+no model reading needed / Qwen's surprise
+                                       French literature  English literature       Proofs (math)
+- - count of different words                         32%                 30%                 39%
+Qwen - surprise                                      52%                 57%                 35%
+
+ ==================================================================================================== 
+C. WHICH WORKS ARE EASIEST TO RECOGNISE (all measures of both models together)
+
+French literature: 52% right overall (chance 20%)
+   Baudelaire poems                                     recognised 68%
+   Mallarmé poems                                       recognised 68%
+   Beckett L'Innommable                                 recognised 68%
+   Poe tales (French, Baudelaire)                       recognised 27%
+   Rimbaud poems                                        recognised 27%
+   most common mix-ups: [('Poe tales', "Beckett L'Innommable", 12), ('Rimbaud poems', 'Baudelaire poems', 8), ('Baudelaire poems', 'Rimbaud poems', 4)]
+
+English literature: 72% right overall (chance 25%)
+   Shakespeare sonnets                                  recognised 82%
+   Shakespeare plays                                    recognised 68%
+   Poe tales (English)                                  recognised 86%
+   Joyce Ulysses                                        recognised 50%
+   most common mix-ups: [('Joyce Ulysses', 'Shakespeare plays', 7), ('Shakespeare plays', 'Joyce Ulysses', 6), ('Shakespeare sonnets', 'Joyce Ulysses', 3)]
+
+Proofs (math): 41% right overall (chance 25%)
+   Ramanujan 1918 (original)                            recognised 50%
+   Andrews ch.5 (modern retelling of the same proof)    recognised 9%
+   Andrews ch.1 (simple modern proof)                   recognised 32%
+   Euclid (ancient)                                     recognised 73%
+   most common mix-ups: [('Ramanujan proof', 'Ramanujan 1918', 15), ('Ramanujan 1918', 'Ramanujan proof', 8), ('Math ch.1', 'Ramanujan proof', 6)]
+
+ ==================================================================================================== 
+D. RAMANUJAN 1918 vs THE OTHER PROOFS (difference of means, Mann-Whitney p)
+  vs Andrews ch.5 (modern retelling of the same proof):
+      dimension Qwen -0.14 (p=0.97); dimension XLM-R +0.13 (p=0.75); step Qwen -8.54 (p=0.38); surprise +0.27 (p=0.57); different words +5.41 (p=0.28)
+  vs Andrews ch.1 (simple modern proof):
+      dimension Qwen -0.27 (p=0.79); dimension XLM-R +1.82 (p=0.018); step Qwen -20.14 (p=0.00026); surprise +0.95 (p=1.5e-05); different words +14.50 (p=0.017)
+  vs Euclid (ancient):
+      dimension Qwen -0.45 (p=0.32); dimension XLM-R +2.53 (p=0.003); step Qwen -26.75 (p=2.5e-06); surprise +1.07 (p=2.9e-07); different words +23.05 (p=0.0022)
+
+ ==================================================================================================== 
+E. SHUFFLE CONTROL (words shuffled inside each passage), mean change over paired passages; Wilcoxon p
+(286 paired passages)
+                            Qwen                   XLM-R              Qwen table             XLM-R table
+dim            +1.68 (p=2.5e-08)        +1.7 (p=3.5e-24)        +0.244 (p=0.054)      +0.279 (p=0.00024)
+step           -76.3 (p=1.2e-48)     -0.0786 (p=5.9e-12)     -0.0103 (p=5.5e-35)     -0.0119 (p=0.00012)

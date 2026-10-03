@@ -1,0 +1,76 @@
+====================================================================================================
+FIXED VECTORS FROM THE QWEN TABLE  (every window = exactly 256 tokens, no context)
+
+group                                n  distinct tokens  dimension (all 256)  dimension (distinct only)         spread
+Shakespeare sonnets                 30        163 ±  3       8.7 ± 0.4          414.1 ±206.1    0.440 ±0.002
+Shakespeare plays                   30        162 ±  4       8.8 ± 0.6          698.1 ±571.7    0.447 ±0.002
+Baudelaire poems                    30        177 ±  4      10.9 ± 0.8          738.2 ±360.3    0.465 ±0.001
+Mallarmé poems                      30        184 ±  3      11.9 ± 0.7         2318.9 ±2105.7    0.467 ±0.001
+Beckett L'Innommable                30        150 ±  6       7.9 ± 0.6          695.2 ±411.3    0.466 ±0.001
+Ramanujan proof (Andrews ch.5)      30        131 ±  9       6.2 ± 0.6          129.7 ±57.4    0.439 ±0.002
+Math ch.1 (elementary)              30        114 ± 10       5.1 ± 0.5          143.5 ±70.7    0.434 ±0.005
+Math ch.13 (combinatorics)          30        110 ± 14       5.0 ± 0.6          113.7 ±28.6    0.428 ±0.009
+Poe tales (English)                 30        161 ±  3       9.1 ± 0.5          435.5 ±113.4    0.445 ±0.001
+Poe tales (French, Baudelaire)      30        149 ± 14       8.7 ± 1.1          394.1 ±150.8    0.461 ±0.003
+
+SHARE OF VARIANCE EXPLAINED BY GROUP INSIDE EACH FAMILY (0 = none, 1 = all)
+  family                              dim(all 256)  dim(distinct)   spread  distinct tokens
+  A. Same stories, two languages              0.01           0.00     0.65             0.03
+  B. French literature                        0.33           0.07     0.18             0.28
+  C. English literature                       0.01           0.01     0.27             0.01
+  D. English math                             0.10           0.01     0.06             0.08
+
+  CONFOUND CHECK: rank correlation between a window's dimension (all 256) and its number of distinct tokens: +0.97
+
+PAIRWISE INSIDE FAMILIES (difference of mean dimension(all 256); Mann-Whitney p)
+  Poe tales (English) vs Poe tales (French, Baudelaire): +0.41 (p=0.34)
+  Baudelaire poems vs Mallarmé poems: -0.98 (p=0.082)
+  Baudelaire poems vs Beckett L'Innommable: +3.04 (p=1.6e-06)
+  Baudelaire poems vs Poe tales (French, Baudelaire): +2.22 (p=0.0083)
+  Mallarmé poems vs Beckett L'Innommable: +4.02 (p=7.1e-09)
+  Mallarmé poems vs Poe tales (French, Baudelaire): +3.20 (p=9.5e-06)
+  Beckett L'Innommable vs Poe tales (French, Baudelaire): -0.82 (p=0.022)
+  Shakespeare sonnets vs Shakespeare plays: -0.09 (p=0.89)
+  Shakespeare sonnets vs Poe tales (English): -0.38 (p=0.22)
+  Shakespeare plays vs Poe tales (English): -0.29 (p=0.38)
+  Ramanujan proof (Andrews ch.5) vs Math ch.1 (elementary): +1.07 (p=0.016)
+  Ramanujan proof (Andrews ch.5) vs Math ch.13 (combinatorics): +1.20 (p=0.021)
+  Math ch.1 (elementary) vs Math ch.13 (combinatorics): +0.13 (p=0.94)
+====================================================================================================
+FIXED VECTORS FROM THE XLM-R TABLE  (every window = exactly 256 tokens, no context)
+
+group                                n  distinct tokens  dimension (all 256)  dimension (distinct only)         spread
+Shakespeare sonnets                 30        157 ±  2       9.2 ± 0.3         1051.0 ±644.2    4.122 ±0.019
+Shakespeare plays                   30        147 ±  8       8.4 ± 0.9          320.6 ±97.7    4.117 ±0.022
+Baudelaire poems                    30        169 ±  4      11.5 ± 0.8          577.9 ±279.8    4.307 ±0.010
+Mallarmé poems                      30        177 ±  4      13.0 ± 1.0         3368.9 ±4420.2    4.327 ±0.021
+Beckett L'Innommable                30        135 ±  7       7.5 ± 0.7         1275.4 ±604.1    4.165 ±0.024
+Ramanujan proof (Andrews ch.5)      30        142 ±  6       7.1 ± 0.6        15969.5 ±23770.1    4.091 ±0.030
+Math ch.1 (elementary)              29        124 ±  7       5.9 ± 0.5          160.8 ±69.0    4.026 ±0.046
+Math ch.13 (combinatorics)          30        120 ± 11       5.7 ± 0.6          101.0 ±24.1    3.977 ±0.103
+Poe tales (English)                 30        160 ±  4      10.6 ± 1.0         1706.7 ±1966.9    4.090 ±0.018
+Poe tales (French, Baudelaire)      30        140 ± 17       8.6 ± 1.2          853.2 ±477.3    4.214 ±0.040
+
+SHARE OF VARIANCE EXPLAINED BY GROUP INSIDE EACH FAMILY (0 = none, 1 = all)
+  family                              dim(all 256)  dim(distinct)   spread  distinct tokens
+  A. Same stories, two languages              0.10           0.01     0.35             0.10
+  B. French literature                        0.41           0.02     0.46             0.35
+  C. English literature                       0.17           0.03     0.06             0.12
+  D. English math                             0.14           0.02     0.06             0.14
+
+  CONFOUND CHECK: rank correlation between a window's dimension (all 256) and its number of distinct tokens: +0.96
+
+PAIRWISE INSIDE FAMILIES (difference of mean dimension(all 256); Mann-Whitney p)
+  Poe tales (English) vs Poe tales (French, Baudelaire): +2.01 (p=0.088)
+  Baudelaire poems vs Mallarmé poems: -1.47 (p=0.047)
+  Baudelaire poems vs Beckett L'Innommable: +4.03 (p=9.8e-08)
+  Baudelaire poems vs Poe tales (French, Baudelaire): +2.93 (p=0.0004)
+  Mallarmé poems vs Beckett L'Innommable: +5.50 (p=1.3e-09)
+  Mallarmé poems vs Poe tales (French, Baudelaire): +4.40 (p=1.4e-06)
+  Beckett L'Innommable vs Poe tales (French, Baudelaire): -1.09 (p=0.054)
+  Shakespeare sonnets vs Shakespeare plays: +0.76 (p=0.14)
+  Shakespeare sonnets vs Poe tales (English): -1.41 (p=0.0046)
+  Shakespeare plays vs Poe tales (English): -2.17 (p=0.0024)
+  Ramanujan proof (Andrews ch.5) vs Math ch.1 (elementary): +1.22 (p=0.0071)
+  Ramanujan proof (Andrews ch.5) vs Math ch.13 (combinatorics): +1.41 (p=0.0033)
+  Math ch.1 (elementary) vs Math ch.13 (combinatorics): +0.20 (p=0.74)

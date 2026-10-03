@@ -1,0 +1,16 @@
+[project]
+name = "textgeom"
+version = "0.1.0"
+description = "Intrinsic dimension (PHD) of texts in transformer embedding space"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+embed = ["torch", "transformers"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

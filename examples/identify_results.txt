@@ -1,0 +1,66 @@
+CHANCE LEVEL (random guessing): {'French literature': '25%', 'English literature': '33%', 'English math': '33%'}
+
+1) WHICH MODEL? (all three measures together: dimension + spread + step length)
+
+
+                                               French literature  English literature        English math   average
+Qwen (reads left to right) - all three together                 48%                 88%                 35%       57%
+XLM-R (reads whole chunk) - all three together                 53%                 56%                 41%       50%
+Qwen input table (no model) - all three together                 67%                 55%                 48%       57%
+XLM-R input table (no model) - all three together                 42%                 42%                 26%       37%
+
+2) WHICH MEASURE?
+
+dimension
+                                               French literature  English literature        English math   average
+Qwen (reads left to right) - dimension                       19%                 65%                 38%       41%
+XLM-R (reads whole chunk) - dimension                        45%                 48%                 41%       45%
+Qwen input table (no model) - dimension                      40%                 35%                 39%       38%
+XLM-R input table (no model) - dimension                     45%                 36%                 35%       39%
+
+spread
+                                               French literature  English literature        English math   average
+Qwen (reads left to right) - spread                          35%                 73%                 38%       49%
+XLM-R (reads whole chunk) - spread                           48%                 42%                 35%       42%
+Qwen input table (no model) - spread                         42%                 55%                 33%       43%
+XLM-R input table (no model) - spread                        38%                 39%                 39%       39%
+
+step length
+                                               French literature  English literature        English math   average
+Qwen (reads left to right) - step length                     43%                 56%                 41%       47%
+XLM-R (reads whole chunk) - step length                      49%                 52%                 38%       46%
+Qwen input table (no model) - step length                    48%                 52%                 38%       46%
+XLM-R input table (no model) - step length                   39%                 47%                 24%       37%
+
+path distance (DTW)
+                                               French literature  English literature        English math   average
+Qwen (reads left to right) - path distance (DTW)                 68%                 86%                 52%       69%
+XLM-R (reads whole chunk) - path distance (DTW)                 59%                 88%                 56%       68%
+Qwen input table (no model) - path distance (DTW)                 67%                 76%                 61%       68%
+XLM-R input table (no model) - path distance (DTW)                 32%                 76%                 61%       56%
+
+measures that need no model reading
+                                               French literature  English literature        English math   average
+(no model needed) - count of different words                 39%                 35%                 33%       36%
+Qwen - surprise (how predictable)                            62%                 73%                 44%       60%
+
+3) WHICH WORKS ARE EASIEST TO RECOGNISE? (all measures from both models together)
+
+French literature: 64% correct overall (chance 25%)
+   Baudelaire poems                   recognised 82% of the time
+   Mallarmé poems                     recognised 77% of the time
+   Beckett L'Innommable               recognised 68% of the time
+   Poe tales (French, Baudelaire)     recognised 27% of the time
+   most common mix-ups (real work -> guessed work): [('Poe tales', "Beckett L'Innommable", 12), ('Baudelaire poems', 'Mallarmé poems', 4), ("Beckett L'Innommable", 'Baudelaire poems', 4)]
+
+English literature: 85% correct overall (chance 33%)
+   Shakespeare sonnets                recognised 95% of the time
+   Shakespeare plays                  recognised 73% of the time
+   Poe tales (English)                recognised 86% of the time
+   most common mix-ups (real work -> guessed work): [('Shakespeare plays', 'Poe tales', 3), ('Shakespeare plays', 'Shakespeare sonnets', 3), ('Poe tales', 'Shakespeare sonnets', 2)]
+
+English math: 44% correct overall (chance 33%)
+   Ramanujan proof (Andrews ch.5)     recognised 68% of the time
+   Math ch.1 (elementary)             recognised 50% of the time
+   Math ch.13 (combinatorics)         recognised 14% of the time
+   most common mix-ups (real work -> guessed work): [('Math ch.13', 'Ramanujan proof', 10), ('Math ch.13', 'Math ch.1', 9), ('Math ch.1', 'Ramanujan proof', 7)]

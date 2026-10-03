@@ -1,0 +1,50 @@
+
+French literature - Qwen contextual   (ceiling = same work, two halves: 0.95; random = 0.01)
+                   Baudelaire poems   Mallarmé poems Beckett L'Innomm        Poe tales    Rimbaud poems
+Baudelaire poems               1.00             0.94             0.75             0.68             0.84
+Mallarmé poems                 0.94             1.00             0.76             0.69             0.87
+Beckett L'Innomm               0.75             0.76             1.00             0.70             0.76
+Poe tales                      0.68             0.69             0.70             1.00             0.69
+Rimbaud poems                  0.84             0.87             0.76             0.69             1.00
+
+English literature - Qwen contextual   (ceiling = same work, two halves: 0.84; random = 0.01)
+                   Shakespeare sonn Shakespeare play        Poe tales    Joyce Ulysses
+Shakespeare sonn               1.00             0.70             0.67             0.58
+Shakespeare play               0.70             1.00             0.68             0.75
+Poe tales                      0.67             0.68             1.00             0.72
+Joyce Ulysses                  0.58             0.75             0.72             1.00
+
+Proofs - Qwen contextual   (ceiling = same work, two halves: 0.86; random = 0.01)
+                     Ramanujan 1918     Andrews ch.5     Andrews ch.1           Euclid          Hilbert         Dedekind       Your paper
+Ramanujan 1918                 1.00             0.85             0.84             0.64             0.71             0.71             0.62
+Andrews ch.5                   0.85             1.00             0.89             0.59             0.64             0.68             0.60
+Andrews ch.1                   0.84             0.89             1.00             0.63             0.68             0.69             0.63
+Euclid                         0.64             0.59             0.63             1.00             0.69             0.69             0.52
+Hilbert                        0.71             0.64             0.68             0.69             1.00             0.74             0.67
+Dedekind                       0.71             0.68             0.69             0.69             0.74             1.00             0.63
+Your paper                     0.62             0.60             0.63             0.52             0.67             0.63             1.00
+
+French literature - XLM-R contextual   (ceiling = same work, two halves: 0.90; random = 0.01)
+                   Baudelaire poems   Mallarmé poems Beckett L'Innomm        Poe tales    Rimbaud poems
+Baudelaire poems               1.00             0.85             0.73             0.58             0.78
+Mallarmé poems                 0.85             1.00             0.82             0.61             0.77
+Beckett L'Innomm               0.73             0.82             1.00             0.62             0.70
+Poe tales                      0.58             0.61             0.62             1.00             0.58
+Rimbaud poems                  0.78             0.77             0.70             0.58             1.00
+
+English literature - XLM-R contextual   (ceiling = same work, two halves: 0.83; random = 0.01)
+                   Shakespeare sonn Shakespeare play        Poe tales    Joyce Ulysses
+Shakespeare sonn               1.00             0.68             0.60             0.63
+Shakespeare play               0.68             1.00             0.65             0.72
+Poe tales                      0.60             0.65             1.00             0.78
+Joyce Ulysses                  0.63             0.72             0.78             1.00
+
+Proofs - XLM-R contextual   (ceiling = same work, two halves: 0.77; random = 0.01)
+                     Ramanujan 1918     Andrews ch.5     Andrews ch.1           Euclid          Hilbert         Dedekind       Your paper
+Ramanujan 1918                 1.00             0.79             0.70             0.63             0.63             0.68             0.63
+Andrews ch.5                   0.79             1.00             0.79             0.59             0.56             0.58             0.54
+Andrews ch.1                   0.70             0.79             1.00             0.59             0.58             0.60             0.58
+Euclid                         0.63             0.59             0.59             1.00             0.67             0.65             0.66
+Hilbert                        0.63             0.56             0.58             0.67             1.00             0.66             0.72
+Dedekind                       0.68             0.58             0.60             0.65             0.66             1.00             0.68
+Your paper                     0.63             0.54             0.58             0.66             0.72             0.68             1.00

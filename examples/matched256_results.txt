@@ -1,0 +1,43 @@
+N per group = 22..22; every window has the same number of points under both models
+
+group                                dim Qwen (running state)    dim XLM-R (whole chunk)  within-group sd Qwen  sd XLM-R
+Shakespeare sonnets                    10.3 ± 0.9                 14.9 ± 0.8                   2.2            2.0
+Shakespeare plays                       8.6 ± 0.7                 13.3 ± 1.2                   1.7            2.8
+Baudelaire poems                       10.7 ± 0.6                 16.5 ± 1.1                   1.4            2.7
+Mallarmé poems                         10.4 ± 0.5                 19.2 ± 1.8                   1.2            4.3
+Beckett L'Innommable                   10.5 ± 0.9                 11.9 ± 1.2                   2.2            2.8
+Ramanujan proof (Andrews ch.5)          8.7 ± 0.6                 11.1 ± 0.9                   1.5            2.4
+Math ch.1 (elementary)                  8.8 ± 0.5                  9.4 ± 0.6                   1.3            1.5
+Math ch.13 (combinatorics)              9.0 ± 0.4                  9.5 ± 0.7                   1.1            1.6
+Poe tales (English)                    11.2 ± 0.6                 15.8 ± 0.9                   1.3            2.2
+Poe tales (French, Baudelaire)         10.6 ± 1.2                 12.2 ± 1.9                   2.9            4.5
+
+HOW WELL DOES EACH MODEL SEPARATE THE GROUPS INSIDE A FAMILY?  (share of variance explained by group; 0 = none, 1 = all)
+  A. Same stories, two languages     dim_qwen: 0.02   dim_xlmr: 0.21
+  B. French literature               dim_qwen: 0.00   dim_xlmr: 0.41
+  C. English literature              dim_qwen: 0.27   dim_xlmr: 0.16
+  D. English math                    dim_qwen: 0.01   dim_xlmr: 0.15
+
+DO THE TWO MODELS AGREE?
+  window by window (all windows): rank correlation +0.62 (p=5.5e-25)
+  B. French literature: ordering of group means  Qwen ['Baudelaire poems', 'Poe tales (French, Baudelaire)', "Beckett L'Innommable", 'Mallarmé poems']
+                                XLM-R ['Mallarmé poems', 'Baudelaire poems', 'Poe tales (French, Baudelaire)', "Beckett L'Innommable"]
+  C. English literature: ordering of group means  Qwen ['Poe tales (English)', 'Shakespeare sonnets', 'Shakespeare plays']
+                                XLM-R ['Poe tales (English)', 'Shakespeare sonnets', 'Shakespeare plays']
+  D. English math: ordering of group means  Qwen ['Math ch.13 (combinatorics)', 'Math ch.1 (elementary)', 'Ramanujan proof (Andrews ch.5)']
+                                XLM-R ['Ramanujan proof (Andrews ch.5)', 'Math ch.13 (combinatorics)', 'Math ch.1 (elementary)']
+
+PAIRWISE GROUP DIFFERENCES INSIDE FAMILIES (difference of means; Mann-Whitney p)
+  Poe tales (English) vs Poe tales (French, Baudelaire): Qwen +0.67 (p=0.63); XLM-R +3.68 (p=0.0032)
+  Baudelaire poems vs Mallarmé poems: Qwen +0.21 (p=0.66); XLM-R -2.75 (p=0.01)
+  Baudelaire poems vs Beckett L'Innommable: Qwen +0.16 (p=0.66); XLM-R +4.57 (p=2.5e-05)
+  Baudelaire poems vs Poe tales (French, Baudelaire): Qwen +0.09 (p=0.68); XLM-R +4.29 (p=0.00076)
+  Mallarmé poems vs Beckett L'Innommable: Qwen -0.04 (p=0.9); XLM-R +7.32 (p=6.1e-07)
+  Mallarmé poems vs Poe tales (French, Baudelaire): Qwen -0.11 (p=0.37); XLM-R +7.05 (p=5.6e-06)
+  Beckett L'Innommable vs Poe tales (French, Baudelaire): Qwen -0.07 (p=0.58); XLM-R -0.27 (p=0.47)
+  Shakespeare sonnets vs Shakespeare plays: Qwen +1.68 (p=0.00049); XLM-R +1.53 (p=0.047)
+  Shakespeare sonnets vs Poe tales (English): Qwen -0.93 (p=0.0012); XLM-R -1.00 (p=0.1)
+  Shakespeare plays vs Poe tales (English): Qwen -2.61 (p=5.6e-06); XLM-R -2.53 (p=0.0019)
+  Ramanujan proof (Andrews ch.5) vs Math ch.1 (elementary): Qwen -0.12 (p=0.77); XLM-R +1.69 (p=0.0089)
+  Ramanujan proof (Andrews ch.5) vs Math ch.13 (combinatorics): Qwen -0.26 (p=0.26); XLM-R +1.64 (p=0.017)
+  Math ch.1 (elementary) vs Math ch.13 (combinatorics): Qwen -0.14 (p=0.58); XLM-R -0.05 (p=0.66)

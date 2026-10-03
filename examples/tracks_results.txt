@@ -1,0 +1,161 @@
+============================================================================================================== 
+1. GROUP MEANS PER TRACK (original text, order kept)
+
+Steele dimension (order-blind)
+group                               Qwen ctx XLM-R ctx  Qwen 1st XLM-R 1st  Qwen tbl XLM-R tbl
+Shakespeare sonnets                     10.3      14.9      5.11      6.08      8.95      9.08
+Shakespeare plays                       8.62      13.3      4.75      5.74       8.4      9.16
+Baudelaire poems                        10.7      16.5      5.82      6.76      11.2        12
+Mallarmé poems                          10.4      19.2      5.94      7.37      11.6      12.5
+Beckett L'Innommable                    10.5      11.9      4.82      5.54      8.23      8.07
+Ramanujan proof (Andrews ch.5)          8.73      11.1      3.88      4.93      6.19      6.81
+Math ch.1 (elementary)                  8.85      9.41      3.57      4.48      5.35      6.22
+Math ch.13 (combinatorics)              8.99      9.47       3.6       4.5      5.51      6.27
+Poe tales (English)                     11.2      15.8      4.98      5.81      8.98      9.73
+Poe tales (French, Baudelaire)          10.6      12.2      4.67      5.02      7.62      7.61
+
+spread = mean distance to the window's centre (order-blind)
+group                               Qwen ctx XLM-R ctx  Qwen 1st XLM-R 1st  Qwen tbl XLM-R tbl
+Shakespeare sonnets                      157       3.2       162      2.19     0.438      4.11
+Shakespeare plays                        183      3.25       180      2.19     0.447      4.13
+Baudelaire poems                         185      3.29       175      2.21     0.465      4.32
+Mallarmé poems                           180      3.19       179      2.16     0.467      4.31
+Beckett L'Innommable                     178      3.35       176      2.22     0.468      4.18
+Ramanujan proof (Andrews ch.5)           160      3.48       180       2.2      0.44      4.08
+Math ch.1 (elementary)                   168      3.54       180      2.21      0.44      4.06
+Math ch.13 (combinatorics)               161      3.55       179      2.18     0.437      4.05
+Poe tales (English)                      175      3.16       165       2.2     0.443      4.08
+Poe tales (French, Baudelaire)           184      3.58       172      2.15     0.462       4.2
+
+step length = mean distance between consecutive tokens (ORDER-AWARE)
+group                               Qwen ctx XLM-R ctx  Qwen 1st XLM-R 1st  Qwen tbl XLM-R tbl
+Shakespeare sonnets                      199       4.2       230      3.01      0.63       5.9
+Shakespeare plays                        217      4.15       242      2.98     0.645      5.89
+Baudelaire poems                         250       4.3       247      3.06     0.669      6.19
+Mallarmé poems                           242      4.18       250      2.97     0.669      6.17
+Beckett L'Innommable                     228      4.35       247      3.05     0.676      6.03
+Ramanujan proof (Andrews ch.5)           181      4.42       233      2.88     0.606      5.79
+Math ch.1 (elementary)                   192      4.45       235      2.92     0.609      5.74
+Math ch.13 (combinatorics)               183      4.48       230      2.87       0.6      5.74
+Poe tales (English)                      210         4       227      3.02     0.639      5.84
+Poe tales (French, Baudelaire)           234      4.63       233      2.98     0.648      6.05
+
+number of distinct tokens per window (Qwen tokens / XLM-R tokens):
+  Shakespeare sonnets                   163 /    156
+  Shakespeare plays                     159 /    153
+  Baudelaire poems                      178 /    170
+  Mallarmé poems                        181 /    176
+  Beckett L'Innommable                  153 /    138
+  Ramanujan proof (Andrews ch.5)        132 /    140
+  Math ch.1 (elementary)                123 /    129
+  Math ch.13 (combinatorics)            124 /    129
+  Poe tales (English)                   157 /    155
+  Poe tales (French, Baudelaire)        140 /    133
+
+surprise (Qwen only, nats/token): {'Shakespeare sonnets': np.float64(4.13), 'Shakespeare plays': np.float64(3.96), 'Baudelaire poems': np.float64(3.44), 'Mallarmé poems': np.float64(3.95), "Beckett L'Innommable": np.float64(2.92), 'Ramanujan proof (Andrews ch.5)': np.float64(3.16), 'Math ch.1 (elementary)': np.float64(2.49), 'Math ch.13 (combinatorics)': np.float64(2.77), 'Poe tales (English)': np.float64(3.33), 'Poe tales (French, Baudelaire)': np.float64(2.58)}
+
+ ============================================================================================================== 
+2. HOW WELL DOES EACH METRIC SEPARATE THE WORKS INSIDE A FAMILY?  (share of variance explained by group; 0 none, 1 all)
+
+dim
+family                              Qwen ctx XLM-R ctx  Qwen 1st XLM-R 1st  Qwen tbl XLM-R tbl
+A. Same stories, 2 languages            0.02      0.21      0.02      0.09      0.07      0.16
+B. French literature                    0.00      0.41      0.28      0.36      0.38      0.45
+C. English literature                   0.27      0.16      0.08      0.04      0.03      0.03
+D. English math                         0.01      0.15      0.07      0.09      0.07      0.03
+
+spread
+family                              Qwen ctx XLM-R ctx  Qwen 1st XLM-R 1st  Qwen tbl XLM-R tbl
+A. Same stories, 2 languages            0.17      0.38      0.22      0.05      0.61      0.34
+B. French literature                    0.16      0.36      0.22      0.12      0.18      0.43
+C. English literature                   0.50      0.08      0.69      0.00      0.28      0.15
+D. English math                         0.05      0.04      0.00      0.02      0.03      0.01
+
+step
+family                              Qwen ctx XLM-R ctx  Qwen 1st XLM-R 1st  Qwen tbl XLM-R tbl
+A. Same stories, 2 languages            0.31      0.38      0.14      0.02      0.11      0.53
+B. French literature                    0.46      0.24      0.68      0.12      0.65      0.46
+C. English literature                   0.18      0.25      0.46      0.03      0.24      0.12
+D. English math                         0.06      0.01      0.02      0.03      0.05      0.03
+
+distinct-token count alone: {'A. Same stories, 2 languages': np.float64(0.05), 'B. French literature': np.float64(0.29), 'C. English literature': np.float64(0.03), 'D. English math': np.float64(0.04)}
+
+ ============================================================================================================== 
+3. SHUFFLE CONTROL: words shuffled inside each window; mean change (shuffled - original) over paired windows, Wilcoxon p
+(220 paired windows)
+
+metric                  Qwen ctx             XLM-R ctx              Qwen 1st             XLM-R 1st              Qwen tbl             XLM-R tbl
+dim            +1.62 (p=0.00034)     +1.63 (p=4.1e-18)    +0.161 (p=2.7e-05)     -0.00166 (p=0.66)       +0.193 (p=0.41)      +0.231 (p=0.008)
+spread         -61.3 (p=8.1e-38)    -0.175 (p=3.2e-30)     -8.92 (p=7.2e-36)       +0.004 (p=0.14)  -0.00456 (p=2.7e-24)       +0.0012 (p=0.5)
+step           -73.5 (p=7.6e-38)   -0.0703 (p=2.2e-07)     -11.2 (p=8.8e-32)     -0.0075 (p=0.064)  -0.00871 (p=9.3e-26)      -0.0046 (p=0.08)
+
+ ============================================================================================================== 
+4. PATH DISTANCES (order-aware): are windows of the same work closer than windows of other works of the family?
+   relative gap = (mean distance to other works - mean distance within the work) / mean distance to other works; permutation p
+
+B. French literature
+track                 metric              original order        words shuffled
+Qwen contextual       DTW               +0.056 (p=0.000)      +0.057 (p=0.000)
+Qwen contextual       Frechet           +0.011 (p=0.000)      +0.004 (p=0.130)
+Qwen contextual       Procrustes        +0.002 (p=0.000)                      
+XLM-R contextual      DTW               +0.026 (p=0.000)      +0.022 (p=0.000)
+XLM-R contextual      Frechet           +0.010 (p=0.000)      +0.010 (p=0.003)
+XLM-R contextual      Procrustes        +0.002 (p=0.000)                      
+Qwen first-token      DTW               +0.041 (p=0.000)      +0.022 (p=0.000)
+Qwen first-token      Frechet           +0.004 (p=0.050)      +0.005 (p=0.053)
+Qwen first-token      Procrustes        +0.001 (p=0.000)                      
+XLM-R first-token     DTW               +0.019 (p=0.000)      +0.016 (p=0.000)
+XLM-R first-token     Frechet           +0.020 (p=0.000)      +0.019 (p=0.007)
+XLM-R first-token     Procrustes        +0.000 (p=0.070)                      
+Qwen table            DTW               +0.024 (p=0.000)      +0.013 (p=0.000)
+Qwen table            Frechet           +0.001 (p=0.227)      -0.001 (p=0.647)
+Qwen table            Procrustes        +0.005 (p=0.000)                      
+XLM-R table           DTW               +0.017 (p=0.000)      +0.014 (p=0.000)
+XLM-R table           Frechet           +0.001 (p=0.137)      -0.001 (p=0.927)
+XLM-R table           Procrustes        +0.006 (p=0.000)                      
+
+C. English literature
+track                 metric              original order        words shuffled
+Qwen contextual       DTW               +0.085 (p=0.000)      +0.101 (p=0.000)
+Qwen contextual       Frechet           +0.030 (p=0.000)      +0.096 (p=0.000)
+Qwen contextual       Procrustes        +0.002 (p=0.000)                      
+XLM-R contextual      DTW               +0.019 (p=0.000)      +0.015 (p=0.000)
+XLM-R contextual      Frechet           +0.030 (p=0.000)      +0.021 (p=0.000)
+XLM-R contextual      Procrustes        +0.001 (p=0.007)                      
+Qwen first-token      DTW               +0.044 (p=0.000)      +0.019 (p=0.000)
+Qwen first-token      Frechet           +0.021 (p=0.000)      +0.017 (p=0.000)
+Qwen first-token      Procrustes        +0.001 (p=0.000)                      
+XLM-R first-token     DTW               +0.012 (p=0.000)      +0.010 (p=0.000)
+XLM-R first-token     Frechet           -0.004 (p=0.710)      -0.003 (p=0.677)
+XLM-R first-token     Procrustes        -0.000 (p=0.697)                      
+Qwen table            DTW               +0.015 (p=0.000)      +0.007 (p=0.000)
+Qwen table            Frechet           -0.002 (p=0.850)      -0.004 (p=0.983)
+Qwen table            Procrustes        +0.001 (p=0.063)                      
+XLM-R table           DTW               +0.008 (p=0.000)      +0.006 (p=0.000)
+XLM-R table           Frechet           +0.001 (p=0.253)      +0.003 (p=0.000)
+XLM-R table           Procrustes        +0.001 (p=0.063)                      
+
+D. English math
+track                 metric              original order        words shuffled
+Qwen contextual       DTW               +0.005 (p=0.070)      +0.012 (p=0.010)
+Qwen contextual       Frechet           -0.002 (p=0.673)      +0.002 (p=0.303)
+Qwen contextual       Procrustes        +0.000 (p=0.270)                      
+XLM-R contextual      DTW               +0.003 (p=0.047)      +0.003 (p=0.017)
+XLM-R contextual      Frechet           +0.003 (p=0.040)      +0.007 (p=0.003)
+XLM-R contextual      Procrustes        +0.000 (p=0.257)                      
+Qwen first-token      DTW               +0.002 (p=0.223)      +0.003 (p=0.017)
+Qwen first-token      Frechet           +0.002 (p=0.303)      +0.001 (p=0.447)
+Qwen first-token      Procrustes        +0.000 (p=0.363)                      
+XLM-R first-token     DTW               +0.004 (p=0.007)      +0.003 (p=0.017)
+XLM-R first-token     Frechet           -0.006 (p=0.697)      -0.010 (p=0.933)
+XLM-R first-token     Procrustes        -0.000 (p=0.600)                      
+Qwen table            DTW               +0.001 (p=0.183)      +0.003 (p=0.010)
+Qwen table            Frechet           +0.002 (p=0.190)      +0.007 (p=0.017)
+Qwen table            Procrustes        +0.000 (p=0.230)                      
+XLM-R table           DTW               +0.003 (p=0.023)      +0.003 (p=0.003)
+XLM-R table           Frechet           -0.001 (p=0.847)      +0.002 (p=0.017)
+XLM-R table           Procrustes        +0.001 (p=0.087)                      
+
+real	15m2.289s
+user	57m55.244s
+sys	0m2.197s

@@ -1,0 +1,12 @@
+Mean Steele dimension of the SAME passages using k random points out of their 256 (12 passages per work; states from the 256-point run).
+                            model          32       64      128      256    256 vs 128
+Shakespeare sonnets         Qwen         14.7     39.9     11.4     10.8      0.95x
+Shakespeare sonnets         XLM-R        63.6     25.7     20.2     15.2      0.75x
+Baudelaire poems            Qwen         20.9     12.9     11.6     10.7      0.92x
+Baudelaire poems            XLM-R        83.3     29.7     23.2     16.8      0.72x
+Beckett L'Innommable        Qwen         18.5     12.9     11.9     10.7      0.90x
+Beckett L'Innommable        XLM-R        61.1     18.0     14.7     11.5      0.78x
+Math ch.1 (elementary)      Qwen         15.1     11.8      9.7      8.8      0.90x
+Math ch.1 (elementary)      XLM-R        63.6     14.9     11.2      9.1      0.81x
+Reading: more points do not raise the dimension; the estimate falls and levels off (small samples overestimate). Qwen is nearly stable by 128-256 points,
+XLM-R is still falling at 256. Compare works only at the same number of points.
