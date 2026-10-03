@@ -192,3 +192,8 @@ because the shortest texts have 11-13). Full output `examples/proofs_results.txt
 - The user's paper: highest Qwen dimension (11.1) and most different words (143); closest by path distance to Dedekind/Hilbert/Ramanujan 1918.
 - Caveats: prose-only has 10 passages per work (noisy); passages of one work are correlated, so guessing accuracy is optimistic; the works differ in topic (geometry, number theory, logic);
   LaTeX-derived texts have gaps where the math was removed; p-values are not corrected for multiple comparisons.
+
+## Pooled dimension of whole works (scripts/pooled_dimension.py, examples/pooled_dimension.csv)
+16 works x 2 readers (Qwen, XLM-R), all 5,632 points of a work pooled, random samples of 250/500/1000/2000/3000 points, plus a second draw at 1000.
+Mean over works: Qwen 12.2, 11.6, 11.1, 11.0, 11.0; XLM-R 15.2, 13.3, 12.3, 11.8, 11.8. Two draws at 1000 points differ by 0.9 on average.
+Dimension falls then levels off from about 2000 points; it does not grow with more points. See REPORT.md Result 8.

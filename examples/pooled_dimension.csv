@@ -1,0 +1,193 @@
+family,work,model,n_points,replicate,dim
+French literature,Baudelaire poems,Qwen,250,0,11.571734906415488
+French literature,Baudelaire poems,Qwen,500,0,11.417983999197308
+French literature,Baudelaire poems,Qwen,1000,0,10.758934243614172
+French literature,Baudelaire poems,Qwen,2000,0,11.290596263772835
+French literature,Baudelaire poems,Qwen,3000,0,11.167580218467876
+French literature,Baudelaire poems,Qwen,1000,1,12.41115658328755
+French literature,Baudelaire poems,XLM-R,250,0,20.35308152192187
+French literature,Baudelaire poems,XLM-R,500,0,14.7405647056497
+French literature,Baudelaire poems,XLM-R,1000,0,14.89626419470702
+French literature,Baudelaire poems,XLM-R,2000,0,13.338699756274757
+French literature,Baudelaire poems,XLM-R,3000,0,14.91379021084917
+French literature,Baudelaire poems,XLM-R,1000,1,14.707914354047205
+French literature,Mallarmé poems,Qwen,250,0,12.64708739549242
+French literature,Mallarmé poems,Qwen,500,0,10.516422625233329
+French literature,Mallarmé poems,Qwen,1000,0,11.036558989721737
+French literature,Mallarmé poems,Qwen,2000,0,11.37249296647275
+French literature,Mallarmé poems,Qwen,3000,0,10.44522181312
+French literature,Mallarmé poems,Qwen,1000,1,9.894432953562228
+French literature,Mallarmé poems,XLM-R,250,0,14.910399683133535
+French literature,Mallarmé poems,XLM-R,500,0,13.5276086434728
+French literature,Mallarmé poems,XLM-R,1000,0,14.124739316596273
+French literature,Mallarmé poems,XLM-R,2000,0,14.877507124027089
+French literature,Mallarmé poems,XLM-R,3000,0,15.210312649272575
+French literature,Mallarmé poems,XLM-R,1000,1,14.471599460408154
+French literature,Beckett L'Innommable,Qwen,250,0,11.355213761646231
+French literature,Beckett L'Innommable,Qwen,500,0,9.914176494733535
+French literature,Beckett L'Innommable,Qwen,1000,0,10.882904604912367
+French literature,Beckett L'Innommable,Qwen,2000,0,9.51885495017575
+French literature,Beckett L'Innommable,Qwen,3000,0,11.26612813962194
+French literature,Beckett L'Innommable,Qwen,1000,1,10.70663121850072
+French literature,Beckett L'Innommable,XLM-R,250,0,13.826786389605555
+French literature,Beckett L'Innommable,XLM-R,500,0,13.331747191023975
+French literature,Beckett L'Innommable,XLM-R,1000,0,13.855982255674046
+French literature,Beckett L'Innommable,XLM-R,2000,0,11.183570384141117
+French literature,Beckett L'Innommable,XLM-R,3000,0,12.611685744963085
+French literature,Beckett L'Innommable,XLM-R,1000,1,12.966253155011776
+French literature,"Poe tales (French, Baudelaire)",Qwen,250,0,11.075512827357898
+French literature,"Poe tales (French, Baudelaire)",Qwen,500,0,8.717399248720032
+French literature,"Poe tales (French, Baudelaire)",Qwen,1000,0,8.469744855565848
+French literature,"Poe tales (French, Baudelaire)",Qwen,2000,0,8.164141693856678
+French literature,"Poe tales (French, Baudelaire)",Qwen,3000,0,8.77485298440016
+French literature,"Poe tales (French, Baudelaire)",Qwen,1000,1,8.49889257360427
+French literature,"Poe tales (French, Baudelaire)",XLM-R,250,0,12.312291475809152
+French literature,"Poe tales (French, Baudelaire)",XLM-R,500,0,10.426222399245322
+French literature,"Poe tales (French, Baudelaire)",XLM-R,1000,0,8.766276228278123
+French literature,"Poe tales (French, Baudelaire)",XLM-R,2000,0,9.657317010936003
+French literature,"Poe tales (French, Baudelaire)",XLM-R,3000,0,9.103290808341336
+French literature,"Poe tales (French, Baudelaire)",XLM-R,1000,1,10.25676091038732
+French literature,Rimbaud poems,Qwen,250,0,10.797841261297444
+French literature,Rimbaud poems,Qwen,500,0,13.358375499418994
+French literature,Rimbaud poems,Qwen,1000,0,10.149640357328302
+French literature,Rimbaud poems,Qwen,2000,0,10.863788541176188
+French literature,Rimbaud poems,Qwen,3000,0,10.928866072292994
+French literature,Rimbaud poems,Qwen,1000,1,9.806177427207372
+French literature,Rimbaud poems,XLM-R,250,0,14.669527806260028
+French literature,Rimbaud poems,XLM-R,500,0,14.41868603011833
+French literature,Rimbaud poems,XLM-R,1000,0,13.452028679011509
+French literature,Rimbaud poems,XLM-R,2000,0,13.181934627279023
+French literature,Rimbaud poems,XLM-R,3000,0,12.83269756514683
+French literature,Rimbaud poems,XLM-R,1000,1,11.952382934558354
+English literature,Shakespeare sonnets,Qwen,250,0,13.791733114596177
+English literature,Shakespeare sonnets,Qwen,500,0,10.531748341051374
+English literature,Shakespeare sonnets,Qwen,1000,0,12.551851391051166
+English literature,Shakespeare sonnets,Qwen,2000,0,12.932407033555569
+English literature,Shakespeare sonnets,Qwen,3000,0,12.724481304015285
+English literature,Shakespeare sonnets,Qwen,1000,1,14.6610422536828
+English literature,Shakespeare sonnets,XLM-R,250,0,13.511584812760209
+English literature,Shakespeare sonnets,XLM-R,500,0,15.46002227956552
+English literature,Shakespeare sonnets,XLM-R,1000,0,12.81617830098352
+English literature,Shakespeare sonnets,XLM-R,2000,0,12.988665983943566
+English literature,Shakespeare sonnets,XLM-R,3000,0,13.616429904693089
+English literature,Shakespeare sonnets,XLM-R,1000,1,11.526651671773427
+English literature,Shakespeare plays,Qwen,250,0,10.862639156467973
+English literature,Shakespeare plays,Qwen,500,0,11.53040331966005
+English literature,Shakespeare plays,Qwen,1000,0,11.861578084313797
+English literature,Shakespeare plays,Qwen,2000,0,12.099487440551602
+English literature,Shakespeare plays,Qwen,3000,0,11.462854303766097
+English literature,Shakespeare plays,Qwen,1000,1,11.377262128550033
+English literature,Shakespeare plays,XLM-R,250,0,20.848839981451853
+English literature,Shakespeare plays,XLM-R,500,0,18.29959917544496
+English literature,Shakespeare plays,XLM-R,1000,0,13.618444337110418
+English literature,Shakespeare plays,XLM-R,2000,0,13.628670043557022
+English literature,Shakespeare plays,XLM-R,3000,0,13.72695838621398
+English literature,Shakespeare plays,XLM-R,1000,1,14.152311436471276
+English literature,Poe tales (English),Qwen,250,0,13.433568773883897
+English literature,Poe tales (English),Qwen,500,0,12.807494013940886
+English literature,Poe tales (English),Qwen,1000,0,12.454483325710502
+English literature,Poe tales (English),Qwen,2000,0,12.773125520468172
+English literature,Poe tales (English),Qwen,3000,0,11.95681855080248
+English literature,Poe tales (English),Qwen,1000,1,11.784349196243737
+English literature,Poe tales (English),XLM-R,250,0,20.00466405641039
+English literature,Poe tales (English),XLM-R,500,0,14.648023539673702
+English literature,Poe tales (English),XLM-R,1000,0,15.17469169549494
+English literature,Poe tales (English),XLM-R,2000,0,14.1176666893431
+English literature,Poe tales (English),XLM-R,3000,0,14.964780650108253
+English literature,Poe tales (English),XLM-R,1000,1,19.335870569604808
+English literature,Joyce Ulysses,Qwen,250,0,12.306529482688584
+English literature,Joyce Ulysses,Qwen,500,0,11.488786005400012
+English literature,Joyce Ulysses,Qwen,1000,0,10.940231627326035
+English literature,Joyce Ulysses,Qwen,2000,0,12.145949015882104
+English literature,Joyce Ulysses,Qwen,3000,0,11.536639382649378
+English literature,Joyce Ulysses,Qwen,1000,1,11.856424650028517
+English literature,Joyce Ulysses,XLM-R,250,0,15.81298061721288
+English literature,Joyce Ulysses,XLM-R,500,0,14.848243446474893
+English literature,Joyce Ulysses,XLM-R,1000,0,15.740988432694351
+English literature,Joyce Ulysses,XLM-R,2000,0,15.439951506896636
+English literature,Joyce Ulysses,XLM-R,3000,0,14.829298577552994
+English literature,Joyce Ulysses,XLM-R,1000,1,16.123257231261075
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),Qwen,250,0,12.077249122570228
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),Qwen,500,0,12.35186755336755
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),Qwen,1000,0,15.129640519397633
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),Qwen,2000,0,12.25807519238498
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),Qwen,3000,0,12.336202790259314
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),Qwen,1000,1,12.87004492375612
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),XLM-R,250,0,15.111657406270798
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),XLM-R,500,0,12.84388697756163
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),XLM-R,1000,0,11.853943821617984
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),XLM-R,2000,0,11.557963611035143
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),XLM-R,3000,0,12.054363498810186
+Proofs,Ramanujan 1918 (Hardy-Ramanujan paper),XLM-R,1000,1,13.515427539533208
+Proofs,Andrews ch.5 (modern retelling of the same proof),Qwen,250,0,12.149226648251355
+Proofs,Andrews ch.5 (modern retelling of the same proof),Qwen,500,0,14.110204045142105
+Proofs,Andrews ch.5 (modern retelling of the same proof),Qwen,1000,0,9.81161876192132
+Proofs,Andrews ch.5 (modern retelling of the same proof),Qwen,2000,0,10.36547791781162
+Proofs,Andrews ch.5 (modern retelling of the same proof),Qwen,3000,0,10.079388197025612
+Proofs,Andrews ch.5 (modern retelling of the same proof),Qwen,1000,1,11.644607310931503
+Proofs,Andrews ch.5 (modern retelling of the same proof),XLM-R,250,0,13.79903774566272
+Proofs,Andrews ch.5 (modern retelling of the same proof),XLM-R,500,0,12.645425661524046
+Proofs,Andrews ch.5 (modern retelling of the same proof),XLM-R,1000,0,10.589611780436922
+Proofs,Andrews ch.5 (modern retelling of the same proof),XLM-R,2000,0,11.061551735497936
+Proofs,Andrews ch.5 (modern retelling of the same proof),XLM-R,3000,0,10.540719545444318
+Proofs,Andrews ch.5 (modern retelling of the same proof),XLM-R,1000,1,10.351687208736616
+Proofs,Andrews ch.1 (simple modern proof),Qwen,250,0,13.709555298564158
+Proofs,Andrews ch.1 (simple modern proof),Qwen,500,0,12.397033311413018
+Proofs,Andrews ch.1 (simple modern proof),Qwen,1000,0,11.120332523579467
+Proofs,Andrews ch.1 (simple modern proof),Qwen,2000,0,10.184893874016865
+Proofs,Andrews ch.1 (simple modern proof),Qwen,3000,0,10.073269874527774
+Proofs,Andrews ch.1 (simple modern proof),Qwen,1000,1,10.482968531306572
+Proofs,Andrews ch.1 (simple modern proof),XLM-R,250,0,15.46629493943968
+Proofs,Andrews ch.1 (simple modern proof),XLM-R,500,0,11.18377635286549
+Proofs,Andrews ch.1 (simple modern proof),XLM-R,1000,0,10.397416769796948
+Proofs,Andrews ch.1 (simple modern proof),XLM-R,2000,0,9.86949211621387
+Proofs,Andrews ch.1 (simple modern proof),XLM-R,3000,0,9.03557682206775
+Proofs,Andrews ch.1 (simple modern proof),XLM-R,1000,1,10.357814949632145
+Proofs,Euclid (ancient),Qwen,250,0,15.303344056887424
+Proofs,Euclid (ancient),Qwen,500,0,11.59637286792967
+Proofs,Euclid (ancient),Qwen,1000,0,10.483894742724509
+Proofs,Euclid (ancient),Qwen,2000,0,10.8775701257525
+Proofs,Euclid (ancient),Qwen,3000,0,10.546879998141955
+Proofs,Euclid (ancient),Qwen,1000,1,10.965981325611288
+Proofs,Euclid (ancient),XLM-R,250,0,9.039087641493825
+Proofs,Euclid (ancient),XLM-R,500,0,11.05256992609484
+Proofs,Euclid (ancient),XLM-R,1000,0,9.134911236029133
+Proofs,Euclid (ancient),XLM-R,2000,0,8.651410990842475
+Proofs,Euclid (ancient),XLM-R,3000,0,8.453317798330431
+Proofs,Euclid (ancient),XLM-R,1000,1,8.767501838769283
+Proofs,Hilbert (1899),Qwen,250,0,10.333074342379938
+Proofs,Hilbert (1899),Qwen,500,0,11.128015421276576
+Proofs,Hilbert (1899),Qwen,1000,0,11.004952301084522
+Proofs,Hilbert (1899),Qwen,2000,0,10.407714380980469
+Proofs,Hilbert (1899),Qwen,3000,0,10.564483603434113
+Proofs,Hilbert (1899),Qwen,1000,1,11.003654351749574
+Proofs,Hilbert (1899),XLM-R,250,0,14.384645029304995
+Proofs,Hilbert (1899),XLM-R,500,0,11.32691318507783
+Proofs,Hilbert (1899),XLM-R,1000,0,10.551517291713878
+Proofs,Hilbert (1899),XLM-R,2000,0,9.830230150737798
+Proofs,Hilbert (1899),XLM-R,3000,0,8.965525916314661
+Proofs,Hilbert (1899),XLM-R,1000,1,10.577591333395821
+Proofs,Dedekind (1888),Qwen,250,0,9.130550479961926
+Proofs,Dedekind (1888),Qwen,500,0,10.252398198825304
+Proofs,Dedekind (1888),Qwen,1000,0,9.231672732039343
+Proofs,Dedekind (1888),Qwen,2000,0,9.564994804457502
+Proofs,Dedekind (1888),Qwen,3000,0,9.651475119448616
+Proofs,Dedekind (1888),Qwen,1000,1,9.019643338709175
+Proofs,Dedekind (1888),XLM-R,250,0,11.099995199613199
+Proofs,Dedekind (1888),XLM-R,500,0,11.165719202327542
+Proofs,Dedekind (1888),XLM-R,1000,0,10.102587466200283
+Proofs,Dedekind (1888),XLM-R,2000,0,8.933661840896821
+Proofs,Dedekind (1888),XLM-R,3000,0,8.51998194977852
+Proofs,Dedekind (1888),XLM-R,1000,1,9.408966450801234
+Proofs,Your paper,Qwen,250,0,13.985220744130036
+Proofs,Your paper,Qwen,500,0,12.981462498268813
+Proofs,Your paper,Qwen,1000,0,11.68767254846373
+Proofs,Your paper,Qwen,2000,0,10.715207537280236
+Proofs,Your paper,Qwen,3000,0,12.444924610010549
+Proofs,Your paper,Qwen,1000,1,13.204779368767927
+Proofs,Your paper,XLM-R,250,0,18.67983319323342
+Proofs,Your paper,XLM-R,500,0,12.356825908182067
+Proofs,Your paper,XLM-R,1000,0,12.183625788691455
+Proofs,Your paper,XLM-R,2000,0,10.708835140247537
+Proofs,Your paper,XLM-R,3000,0,10.044943677086195
+Proofs,Your paper,XLM-R,1000,1,12.71001066006139

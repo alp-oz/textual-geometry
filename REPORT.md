@@ -80,6 +80,22 @@ share the model's main directions, but the pattern is meaningful (Qwen):
 * Proofs: Ramanujan 1918 overlaps most with Andrews' retelling of the same proof (**0.85**) and ch.1 (0.84), least with Euclid (0.64) and your paper (0.62); Euclid is the most distant from all.
 Full matrices: `examples/direction_overlap.txt`.
 
+## Result 8 — Dimension of a whole work, at 250 to 3000 points
+Instead of one passage, we pooled all the points of a work (22 passages x 256 = 5,632) and measured dimension on random samples of 250, 500, 1000, 2000 and 3000 points.
+Average over the 16 works:
+
+| Points | 250 | 500 | 1000 | 2000 | 3000 |
+|---|---|---|---|---|---|
+| Qwen | 12.2 | 11.6 | 11.1 | 11.0 | 11.0 |
+| XLM-R | 15.2 | 13.3 | 12.3 | 11.8 | 11.8 |
+
+* **More points do not double the dimension.** It falls a little and levels off from about 2000 points. Qwen is almost flat (12.2 to 11.0).
+* Two random draws of the same size differ by about 0.9 on average, so differences below about 1 are noise.
+* At 3000 points the ordering is stable (XLM-R): rich literary vocabulary at the top (Mallarmé 15.2, Poe in English 15.0, Baudelaire 14.9, Joyce 14.8), plain proofs at the bottom
+  (Euclid 8.5, Dedekind 8.5, Andrews ch.1 9.0, Hilbert 9.0, Poe in French 9.1). Ramanujan 1918 is in the middle (12.1), your paper 10.0.
+  Qwen compresses the differences (8.8 to 12.3).
+Per-work numbers: `examples/pooled_dimension.csv`.
+
 ## All the measures we tried
 | Measure | What it asks | Status |
 |---|---|---|
@@ -95,7 +111,8 @@ Full matrices: `examples/direction_overlap.txt`.
 | Zig-zag (angle between consecutive steps), straightness | does the path keep going or turn back | dropped: same for every text |
 | Common direction, same-word-same-move | early checks from the proposal | early run only |
 | Word shuffle, same stories in two languages | controls | used |
-| Not done | how often the path returns to a place; dimension layer by layer; dimension of a whole work's cloud | possible next steps |
+| Pooled dimension of a whole work | dimension of all a work's points together, at 250 to 3000 points | done (Result 8) |
+| Not done | how often the path returns to a place; dimension layer by layer | possible next steps |
 
 ## What we cannot conclude
 * Only 22 passages per work (10 in the prose-only version of the proofs); passages of one work resemble each other, so the guessing rates are somewhat optimistic.
