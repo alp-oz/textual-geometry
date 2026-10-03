@@ -1,0 +1,71 @@
+A. HUMAN AGAINST CLAUDE (learn on one half, guess the other half, both directions; random guessing 50%)
+
+Shakespeare's sonnets: 40 passages tested
+  measure                      right     95% range   p (corrected)
+  path distance (Qwen)           95%       83%-99%        1.64e-08
+  all measures together          95%       83%-99%        1.64e-08
+  surprise                       88%       74%-95%        1.31e-05
+  step length (Qwen)             75%       60%-86%          0.0189
+  different words                60%       45%-74%               1
+  dimension (XLM-R)              60%       45%-74%               1
+  dimension (Qwen)               55%       40%-69%               1
+  path distance (XLM-R)          50%       35%-65%               1
+
+Baudelaire: 42 passages tested
+  measure                      right     95% range   p (corrected)
+  path distance (Qwen)          100%      92%-100%        5.46e-12
+  surprise                       95%       84%-99%        4.73e-09
+  all measures together          93%       81%-98%        5.63e-08
+  step length (Qwen)             67%       52%-79%           0.305
+  dimension (XLM-R)              57%       42%-71%               1
+  dimension (Qwen)               55%       40%-69%               1
+  path distance (XLM-R)          55%       40%-69%               1
+  different words                36%       23%-51%               1
+
+Euclid: 42 passages tested
+  measure                      right     95% range   p (corrected)
+  path distance (Qwen)           86%       72%-93%        2.55e-05
+  surprise                       74%       59%-85%          0.0231
+  path distance (XLM-R)          71%       56%-83%          0.0594
+  step length (Qwen)             64%       49%-77%           0.575
+  all measures together          55%       40%-69%               1
+  dimension (Qwen)               55%       40%-69%               1
+  dimension (XLM-R)              52%       38%-67%               1
+  different words                52%       38%-67%               1
+
+(p-values corrected for the 24 tests of part A)
+
+B. WHICH WORK DOES CLAUDE'S TEXT RESEMBLE? (guesser trained on every passage of the real works of the family)
+
+Sonnets written by Claude  (real works in the family: Shakespeare sonnets, Shakespeare plays, Poe tales)
+  all measures together      -> Poe tales 21, Shakespeare sonnets 1
+  path distance (Qwen)       -> Shakespeare sonnets 22
+  path distance (XLM-R)      -> Shakespeare sonnets 21, Poe tales 1
+
+Baudelaire-style poems written by Claude  (real works in the family: Baudelaire poems, Mallarmé poems, Beckett L'Innommable, Poe tales)
+  all measures together      -> Baudelaire poems 22
+  path distance (Qwen)       -> Baudelaire poems 12, Mallarmé poems 10
+  path distance (XLM-R)      -> Mallarmé poems 15, Baudelaire poems 7
+
+Euclid-style proofs written by Claude  (real works in the family: Ramanujan 1918, Andrews ch.5, Andrews ch.1, Euclid, Hilbert, Dedekind, Your paper)
+  all measures together      -> Euclid 19, Hilbert 2, Andrews ch.1 1
+  path distance (Qwen)       -> Euclid 22
+  path distance (XLM-R)      -> Euclid 21, Your paper 1
+
+C. MEANS (human | Claude)
+                          measure                   human   Claude
+  Shakespeare's sonnets   different words          162.59   159.91
+  Shakespeare's sonnets   surprise (Qwen)            4.13     3.56
+  Shakespeare's sonnets   step length (Qwen)       198.69   207.11
+  Shakespeare's sonnets   dimension (Qwen)          10.30    10.22
+  Shakespeare's sonnets   dimension (XLM-R)         14.85    16.56
+  Baudelaire              different words          177.68   179.23
+  Baudelaire              surprise (Qwen)            3.44     3.00
+  Baudelaire              step length (Qwen)       250.14   245.11
+  Baudelaire              dimension (Qwen)          10.65    10.88
+  Baudelaire              dimension (XLM-R)         16.46    15.63
+  Euclid                  different words          107.95   109.00
+  Euclid                  surprise (Qwen)            2.19     1.86
+  Euclid                  step length (Qwen)       195.24   202.22
+  Euclid                  dimension (Qwen)           9.00     9.77
+  Euclid                  dimension (XLM-R)          7.58     7.90

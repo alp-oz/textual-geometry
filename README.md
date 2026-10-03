@@ -94,5 +94,7 @@ Poe's tales in English and in Baudelaire's French translation (fetched by the `s
 Andrews' *The Theory of Partitions*, Joyce *Ulysses*, Euclid (Casey), Hilbert, Dedekind, the 1918 Hardy–Ramanujan paper
 (`data/proofs_raw/`, `data/prose/`) and the author's own paper (`data/user/`). The per-passage numbers for all works are in `examples/`.
 
+The texts in `data/generated/` were written by Claude for the human-against-AI test (Result 9 of `REPORT.md`).
+
 Licence: MIT (code). The texts keep their own status.
 Earlier experiments (unmatched, Qwen-only, XLM-R-only, static table) are in `RESULTS.md` and `examples/`.

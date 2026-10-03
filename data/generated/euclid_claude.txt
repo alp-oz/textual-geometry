@@ -1,0 +1,300 @@
+PROP. I.—Theorem.
+
+If two right lines (AB, CD) bisect each other at the point E, the lines joining their extremities form a parallelogram.
+
+Dem.—Join AC, CB, BD, DA. Because AE is equal to EB, and CE to ED, by hypothesis, and the angle AEC is equal to the angle BED (Prop. xv.), the triangle AEC is equal to the triangle BED in every respect (Prop. iv.). Hence the side AC is equal to the side BD, and the angle ACE is equal to the angle BDE. But these are alternate angles; therefore AC is parallel to BD (Prop. xxvii.). In the same manner it may be shown that AD is equal and parallel to CB. Therefore the figure ACBD is a parallelogram.
+
+PROP. II.—Problem.
+
+To bisect a given finite right line (AB).
+
+Sol.—On AB describe the equilateral triangle ABC (Prop. i.). Bisect the angle ACB by the right line CD, meeting AB in D (Prop. ix.). Then AB is bisected in D.
+
+Dem.—Because AC is equal to CB, and CD is common to the two triangles ACD, BCD, and the angle ACD is equal to the angle BCD, the base AD is equal to the base DB (Prop. iv.). Therefore AB is bisected in the point D, which was to be done.
+
+PROP. III.—Theorem.
+
+The perpendicular from the vertex of an isosceles triangle on the base bisects the base.
+
+Dem.—Let ABC be an isosceles triangle, having AB equal to AC, and let AD be perpendicular to BC. Because the angles ABD and ACD are equal (Prop. v.), and the angles ADB and ADC are both right angles, the remaining angles BAD and CAD are equal (Prop. xxxii.). Hence the triangles ABD and ACD, having two angles of the one equal to two angles of the other, each to each, and the side AD common, are equal in every respect (Prop. xxvi.). Therefore BD is equal to DC.
+
+PROP. IV.—Theorem.
+
+If two chords of a circle (AB, CD) intersect at the point E, the rectangle contained by the segments of one is equal to the rectangle contained by the segments of the other.
+
+Dem.—Join AC and DB. Because the angles ACD and ABD stand on the same arc AD, they are equal (Prop. xxi., Book III.). The angles AEC and DEB are equal, being vertically opposite (Prop. xv.). Hence the triangles AEC and DEB are equiangular, and their sides about the equal angles are proportional (Prop. iv., Book VI.). Therefore AE is to ED as CE is to EB; and the rectangle AE . EB is equal to the rectangle CE . ED (Prop. xvi., Book VI.).
+
+PROP. V.—Problem.
+
+Through a given point (P) to draw a right line parallel to a given right line (AB).
+
+Sol.—Take any point C in AB, and join PC. At the point P, in the right line CP, make the angle CPD equal to the angle PCB (Prop. xxiii.), the points D and B being on opposite sides of CP. Then PD is the parallel required.
+
+Dem.—Because the right line CP meets the right lines AB and PD, and makes the alternate angles PCB and CPD equal, PD is parallel to AB (Prop. xxvii.), which was to be done.
+
+PROP. VI.—Theorem.
+
+The angle in a semicircle is a right angle.
+
+Dem.—Let ABC be a semicircle on the diameter AC, whose centre is O, and let B be any point in the circumference. Join OB. Because OA is equal to OB, the angle OAB is equal to the angle OBA (Prop. v.). Again, because OB is equal to OC, the angle OBC is equal to the angle OCB. Hence the angle ABC is equal to the sum of the angles OAB and OCB. But the three angles of the triangle ABC are together equal to two right angles (Prop. xxxii.); therefore the angle ABC is half of two right angles, and is a right angle.
+
+PROP. VII.—Theorem.
+
+If a right line touch a circle, and from the point of contact a chord be drawn, the angles which the chord makes with the tangent are equal to the angles in the alternate segments.
+
+Dem.—Let the right line DE touch the circle ABC at the point B, and let BA be any chord drawn from B. Draw the diameter BF, and join AF. Because BF is the diameter, the angle BAF is a right angle (Prop. vi.); and the angle FBE is a right angle, since FB is perpendicular to the tangent at B (Prop. xviii., Book III.). Hence the angle ABE together with the angle ABF is equal to the angles BAF and AFB together. But the angle BAF is equal to the angle FBE; therefore the angle ABE is equal to the angle AFB, which is the angle in the alternate segment.
+
+PROP. VIII.—Problem.
+
+To describe a circle about a given triangle (ABC).
+
+Sol.—Bisect AB in D, and AC in E (Prop. ii.). From D and E draw DF and EF perpendicular to AB and AC, meeting in F. Then F is the centre of the circle required.
+
+Dem.—Join FA, FB, FC. Because AD is equal to DB, and DF is common and at right angles to AB, the base FA is equal to the base FB (Prop. iv.). In like manner FA is equal to FC. Therefore the three right lines FA, FB, FC are equal; and the circle described with F as centre, and FA as radius, passes through the three points A, B, C, which was to be done.
+
+PROP. IX.—Theorem.
+
+The opposite angles of a quadrilateral inscribed in a circle are together equal to two right angles.
+
+Dem.—Let ABCD be a quadrilateral inscribed in a circle. Join AC and BD. Because the angles BAC and BDC stand on the same arc BC, they are equal (Prop. xxi., Book III.). In like manner the angles CAD and CBD are equal. Hence the angle BAD is equal to the sum of the angles BDC and CBD. Add to each the angle BCD; then the angle BAD together with the angle BCD is equal to the three angles of the triangle BCD, that is, to two right angles (Prop. xxxii.).
+
+PROP. X.—Theorem.
+
+Parallelograms on the same base and between the same parallels are equal to one another.
+
+Dem.—Let the parallelograms ABCD and EBCF be on the same base BC, and between the same parallels AF and BC. Because AD is equal to BC, and EF is equal to BC (Prop. xxxiv.), AD is equal to EF. Add or take away the common part DE; then AE is equal to DF. Now AB is equal to DC, and the angle EAB is equal to the angle FDC (Prop. xxix.). Therefore the triangle EAB is equal to the triangle FDC (Prop. iv.). From the whole figure ABCF take away the triangle FDC, and the remainder is the parallelogram ABCD; take away from the same whole the triangle EAB, and the remainder is the parallelogram EBCF. Therefore these remainders are equal.
+
+PROP. XI.—Theorem.
+
+A triangle is half of a parallelogram on the same base and between the same parallels.
+
+Dem.—Let the triangle ABC and the parallelogram DBCE be on the same base BC, and between the same parallels BC and AD. Draw CF parallel to BA, meeting AD in F. The figure ABCF is a parallelogram, and is equal to the parallelogram DBCE (Prop. x.). But the diagonal AC bisects the parallelogram ABCF (Prop. xxxiv.); therefore the triangle ABC is half of the parallelogram ABCF, and consequently half of the parallelogram DBCE.
+
+PROP. XII.—Problem.
+
+To construct a square equal to a given rectangle (AB . BC).
+
+Sol.—Place AB and BC in the same right line, and on AC as diameter describe a semicircle. At B draw BD perpendicular to AC, meeting the semicircle in D. The square on BD is equal to the rectangle AB . BC.
+
+Dem.—Join AD and DC. The angle ADC is a right angle (Prop. vi.). Because the right line DB is drawn from the right angle perpendicular to the base, the triangles ABD and DBC are similar (Prop. viii., Book VI.). Therefore AB is to BD as BD is to BC; and the rectangle AB . BC is equal to the square on BD (Prop. xvii., Book VI.), which was to be done.
+
+PROP. XIII.—Theorem.
+
+The line joining the middle points of two sides of a triangle is parallel to the third side, and equal to half of it.
+
+Dem.—Let ABC be a triangle, and let D and E be the middle points of AB and AC. Join DE, and produce it to F, making EF equal to DE. Join CF. Because AE is equal to EC, and DE to EF, and the angle AED is equal to the angle CEF (Prop. xv.), the triangle AED is equal to the triangle CEF (Prop. iv.). Hence CF is equal to AD, that is, to DB, and the angle ADE is equal to the angle CFE. Therefore CF is parallel to DB (Prop. xxvii.); and DBCF is a parallelogram (Prop. xxxiii.). Hence DF is parallel and equal to BC; and DE, being half of DF, is half of BC.
+
+PROP. XIV.—Theorem.
+
+The three perpendiculars from the vertices of a triangle on the opposite sides meet in a point.
+
+Dem.—Let ABC be the triangle, and let AD, BE be the perpendiculars from A and B on BC and CA, meeting in O. Join CO, and produce it to meet AB in F. Because the angles ADB and AEB are right angles, the points D and E lie on the circle described on AB as diameter (Prop. vi.). Hence the angle OAE is equal to the angle OBD, being angles in the same segment. Again, the points C, D, O, E lie on a circle, because the angles at D and E are right angles (Prop. ix.). Therefore the angle OCE is equal to the angle ODE, and this is equal to the angle OAB. Hence in the triangle AFC the angles at A and C are together equal to a right angle; therefore the angle AFC is a right angle, and CF is perpendicular to AB.
+
+PROP. XV.—Problem.
+
+To divide a given finite right line (AB) into any number of equal parts.
+
+Sol.—From A draw a right line AC making any angle with AB. In AC take any point D, and make DE, EF, and so on, each equal to AD, until as many equal parts have been taken as are required. Join the last point G to B, and through the points D, E, F draw lines parallel to GB, meeting AB in H, K, L. Then AB is divided at H, K, L into equal parts.
+
+Dem.—Because the parallels DH, EK, FL, GB cut the transversal AG into equal parts, they cut AB into equal parts (Prop. ii., Book VI.), which was to be done.
+
+PROP. XVI.—Theorem.
+
+The bisector of the vertical angle of a triangle divides the base into segments proportional to the sides.
+
+Dem.—Let the angle BAC of the triangle ABC be bisected by AD, meeting BC in D. Through C draw CE parallel to DA, meeting BA produced in E. Because CE is parallel to DA, the angle ACE is equal to the angle CAD, and the angle AEC is equal to the angle BAD (Prop. xxix.). But the angles CAD and BAD are equal; therefore the angle ACE is equal to the angle AEC, and AE is equal to AC (Prop. vi.). Now because AD is parallel to EC, BD is to DC as BA is to AE (Prop. ii., Book VI.). Therefore BD is to DC as BA is to AC.
+
+PROP. XVII.—Theorem.
+
+The squares on the diagonals of a parallelogram are together equal to the squares on its four sides.
+
+Dem.—Let ABCD be a parallelogram, with the diagonals AC and BD meeting in E. The point E bisects each diagonal (Prop. xxxiv.). In the triangle ABD, the square on AB together with the square on AD is equal to twice the square on AE together with twice the square on BE (Prop. xii.). In like manner, the squares on CB and CD are together equal to twice the square on CE together with twice the square on BE. Add these results; and since AE is equal to CE, the four sides are together equal to four times the square on AE, together with four times the square on BE. But these are the squares on AC and BD.
+
+PROP. XVIII.—Problem.
+
+To find a mean proportional between two given right lines (A and B).
+
+Sol.—In a right line take CD equal to A, and DE equal to B, and on CE as diameter describe a semicircle. At D draw DF perpendicular to CE, meeting the semicircle in F. Then DF is the mean proportional required.
+
+Dem.—Join CF and FE. The angle CFE is a right angle (Prop. vi.), and FD is perpendicular to the hypotenuse; hence CD is to DF as DF is to DE (Prop. viii., Book VI.), which was to be done.
+
+PROP. XIX.—Theorem.
+
+If a quadrilateral have its opposite sides equal, it is a parallelogram.
+
+Dem.—Let ABCD be a quadrilateral having AB equal to CD, and AD equal to BC. Join AC. The triangles ABC and CDA have the sides AB, BC equal to CD, DA, each to each, and the base AC common; therefore they are equal in every respect (Prop. viii.). Hence the angle BAC is equal to the angle DCA; and these are alternate angles; therefore AB is parallel to CD (Prop. xxvii.). In like manner the angle ACB is equal to the angle CAD, and BC is parallel to AD. Therefore ABCD is a parallelogram.
+
+PROP. XX.—Theorem.
+
+Of all triangles on the same base and having the same perimeter, the isosceles has the greatest area.
+
+Dem.—Let ABC be an isosceles triangle, with AB equal to AC, and let DBC be any other triangle on the same base BC, having the sum of the sides BD and DC equal to the sum of BA and AC. The point D is on the ellipse whose foci are B and C; therefore it lies at a less distance from BC than A, the end of the minor axis. Hence the altitude of the triangle DBC is less than the altitude of ABC; and the triangle ABC, having the same base, is greater than the triangle DBC (Prop. xxxviii.).
+
+PROP. XXI.—Theorem.
+
+The tangents drawn to a circle from an external point are equal.
+
+Dem.—Let PA and PB be tangents to a circle, whose centre is O, from the external point P. Join OA, OB, and OP. The angles OAP and OBP are right angles (Prop. xviii., Book III.). In the triangles OAP and OBP the side OP is common, and OA is equal to OB; therefore the square on PA is equal to the square on PB, each being the difference between the square on OP and the square on the radius (Prop. xlvii.). Hence PA is equal to PB.
+
+PROP. XXII.—Problem.
+
+From a given point (P) outside a circle to draw a tangent to the circle.
+
+Sol.—Join P to the centre O, and bisect PO in M. With M as centre and MO as radius describe a circle, cutting the given circle in A and B. Join PA and PB. These are tangents to the given circle.
+
+Dem.—Join OA. The angle PAO is the angle in a semicircle, and is therefore a right angle (Prop. vi.). Hence PA is perpendicular to the radius OA at its extremity, and touches the circle (Prop. xvi., Book III.). In like manner PB touches it, which was to be done.
+
+PROP. XXIII.—Theorem.
+
+Similar triangles are to one another in the duplicate ratio of their corresponding sides.
+
+Dem.—Let ABC and DEF be similar triangles, the angles at A, B, C being equal to the angles at D, E, F, respectively. Take BG on BC a third proportional to BC and EF, so that BC is to EF as EF is to BG, and join AG. Because AB is to DE as BC is to EF, and BC is to EF as EF is to BG, the triangle ABG is equal to the triangle DEF in every respect. But the triangle ABC is to the triangle ABG as BC is to BG (Prop. i., Book VI.), that is, in the duplicate ratio of BC to EF. Therefore the triangle ABC is to the triangle DEF in the duplicate ratio of the corresponding sides.
+
+PROP. XXIV.—Theorem.
+
+If a straight line be drawn parallel to the base of a triangle, it cuts the sides proportionally.
+
+Dem.—Let DE be drawn parallel to the base BC of the triangle ABC, meeting AB in D and AC in E. Join BE and CD. The triangles DBE and DCE are equal, being on the same base DE and between the same parallels (Prop. xxxvii.). Hence the triangle ADE is to the triangle DBE as the same triangle ADE is to the triangle DCE. But the triangle ADE is to the triangle DBE as AD is to DB; and the triangle ADE is to the triangle DCE as AE is to EC (Prop. i., Book VI.). Therefore AD is to DB as AE is to EC.
+
+PROP. XXV.—Theorem.
+
+The medians of a triangle meet in a point, which divides each of them in the ratio of two to one.
+
+Dem.—Let ABC be a triangle, and let BE and CF be the medians from B and C, meeting in G. Join EF. Because F and E are the middle points of AB and AC, EF is parallel to BC, and equal to half of it (Prop. xiii.). Hence the triangles GEF and GBC are equiangular, and EF is to BC as GE is to GB. Therefore GE is half of GB; that is, GB is double of GE. In like manner, GC is double of GF. Now if the third median AD meet BE in a point G', it may be shown in the same way that G'B is double of G'E; therefore G' coincides with G, and the three medians meet in the point G.
+
+PROP. XXVI.—Problem.
+
+To inscribe a circle in a given triangle (ABC).
+
+Sol.—Bisect the angles ABC and ACB by the right lines BD and CD, meeting in D (Prop. ix.). From D draw DE, DF, DG perpendicular to the sides BC, CA, AB. The circle described with D as centre and DE as radius is the circle required.
+
+Dem.—In the triangles DBE and DBG, the angles DBE and DBG are equal, the angles at E and G are right angles, and DB is common; therefore DE is equal to DG (Prop. xxvi.). In like manner DE is equal to DF. Hence the three perpendiculars DE, DF, DG are equal; and the circle passes through E, F, G, and touches the sides at these points (Prop. xvi., Book III.), which was to be done.
+
+PROP. XXVII.—Theorem.
+
+If two circles touch one another externally, the right line joining their centres passes through the point of contact.
+
+Dem.—Let the circles ABC and ADE touch each other externally at A, and let F and G be their centres. If the right line FG do not pass through A, let it cut the circles in the points B and D, and join FA and AG. Because F is the centre of the circle ABC, FA is equal to FB; and because G is the centre of the circle ADE, GA is equal to GD. Hence FA and AG are together equal to FB and DG. But FB and DG are together less than FG, since they do not include the part BD; therefore FA and AG are together less than FG, which is impossible (Prop. xx.). Hence FG passes through A.
+
+PROP. XXVIII.—Theorem.
+
+If from any point within a circle more than two equal right lines can be drawn to the circumference, that point is the centre of the circle.
+
+Dem.—Let the right lines DA, DB, DC, drawn from the point D to the circumference of the circle ABC, be equal. Join AB and BC, and bisect them in E and F. Join DE and DF. Because AE is equal to EB, and ED is common, and DA is equal to DB, the angle AED is equal to the angle BED, and each is a right angle (Prop. viii.). Hence ED, being perpendicular to the chord AB at its middle point, passes through the centre (Prop. i., Book III.). In like manner FD passes through the centre. But ED and FD meet only in D; therefore D is the centre.
+
+PROP. XXIX.—Problem.
+
+To construct a triangle having its sides equal to three given right lines (A, B, C), any two of which are together greater than the third.
+
+Sol.—Take a right line DE equal to A. With D as centre and a radius equal to B describe a circle; with E as centre and a radius equal to C describe another circle, cutting the former in F. Join DF and EF. Then DEF is the triangle required.
+
+Dem.—Because DF is equal to B, and EF to C, and DE to A, the triangle DEF has its three sides equal to the three given right lines. The circles will intersect, because any two of the three lines are together greater than the third (Prop. xxii.), which was to be done.
+
+PROP. XXX.—Theorem.
+
+The angle at the centre of a circle is double of the angle at the circumference standing on the same arc.
+
+Dem.—Let O be the centre of the circle ABC, and let the angle BOC at the centre and the angle BAC at the circumference stand on the same arc BC. Join AO, and produce it to D. Because OA is equal to OB, the angle OAB is equal to the angle OBA; and the exterior angle BOD is equal to the two interior angles OAB and OBA together (Prop. xxxii.); therefore the angle BOD is double of the angle OAB. In like manner the angle COD is double of the angle OAC. Hence the whole angle BOC is double of the whole angle BAC.
+
+PROP. XXXI.—Theorem.
+
+If the diagonals of a quadrilateral are equal and bisect one another, the quadrilateral is a rectangle.
+
+Dem.—Let the diagonals AC and BD of the quadrilateral ABCD be equal, and bisect each other in E. Because AE is equal to EC, and BE to ED, the figure ABCD is a parallelogram (Prop. i.). Now AE, EB, EC, ED are all equal, being halves of equal lines; hence the point E is equidistant from the four vertices, and the circle described with E as centre passes through them. The angle ABC is therefore an angle in a semicircle, whose diameter is AC, and is a right angle (Prop. vi.). In like manner the other angles are right angles. Therefore ABCD is a rectangle.
+
+PROP. XXXII.—Problem.
+
+To draw a right line which shall touch two given circles.
+
+Sol.—Let the centres of the given circles be A and B, and their radii a and b, a being the greater. With A as centre and a radius equal to the difference of a and b describe a circle. From B draw a tangent BC to this circle (Prop. xxii.). Join AC, and produce it to meet the greater circle in D. Draw BE parallel to AD, meeting the lesser circle in E. Then DE is the common tangent required.
+
+Dem.—Because AD is equal to a, and AC to the difference of a and b, CD is equal to b; but BE is equal to b, and BE is parallel to CD; therefore CDEB is a parallelogram (Prop. xxxiii.). Hence DE is parallel to CB, and consequently perpendicular to AD and to BE. It therefore touches both circles (Prop. xvi., Book III.), which was to be done.
+
+PROP. XXXIII.—Theorem.
+
+The rectangle contained by the diagonals of a quadrilateral inscribed in a circle is equal to the sum of the rectangles contained by its opposite sides.
+
+Dem.—Let ABCD be a quadrilateral inscribed in a circle. Make the angle BAE equal to the angle CAD, E being in BD. The triangles ABE and ACD are equiangular, because the angles ABE and ACD stand on the same arc AD (Prop. xxi., Book III.); therefore BA is to BE as CA is to CD, and the rectangle BA . CD is equal to the rectangle CA . BE. Again, the triangles ADE and ACB are equiangular; therefore AD is to DE as AC is to CB, and the rectangle AD . BC is equal to the rectangle AC . DE. Add these results; then the rectangle AC . BD is equal to the sum of the rectangles AB . CD and AD . BC.
+
+PROP. XXXIV.—Theorem.
+
+If a right line be divided into two parts, the square on the whole line is equal to the squares on the two parts, together with twice the rectangle contained by the parts.
+
+Dem.—Let the right line AB be divided at C. On AB describe the square ADEB, and draw CF parallel to AD, meeting DE in F. Through the point where CF meets the diagonal draw GH parallel to AB. The square ADEB is made up of the square on AC, the square on CB, and two equal rectangles contained by AC and CB. Therefore the square on AB is equal to the squares on AC and CB, together with twice the rectangle AC . CB (Prop. iv., Book II.).
+
+PROP. XXXV.—Theorem.
+
+Of all right lines drawn from a point to a given right line, the perpendicular is the least.
+
+Dem.—Let AB be the given right line, and P a point outside it; let PC be the perpendicular, and PD any other right line from P to AB. In the triangle PCD the angle PCD is a right angle; therefore the angle PDC is less than a right angle (Prop. xxxii.), and therefore less than the angle PCD. Hence the side PC, which is opposite to the less angle, is less than the side PD, which is opposite to the greater (Prop. xix.). Therefore the perpendicular PC is the least of all right lines drawn from P to AB.
+
+PROP. XXXVI.—Theorem.
+
+If two triangles have two sides of the one equal to two sides of the other, each to each, and the included angles supplementary, the triangles are equal in area.
+
+Dem.—Let the triangles ABC and DEF have AB equal to DE, and AC equal to DF, and let the angles BAC and EDF be together equal to two right angles. Produce BA to G, making AG equal to AB. Then the angle CAG is the supplement of the angle BAC, and is therefore equal to the angle EDF. Join CG. The triangle ACG has the sides AC and AG equal to DF and DE, and the included angle equal to the angle EDF; therefore it is equal to the triangle DEF (Prop. iv.). But the triangle ACG is equal to the triangle ABC, being on equal bases AG and AB, and having the same vertex C (Prop. xxxviii.). Therefore the triangle ABC is equal to the triangle DEF.
+
+PROP. XXXVII.—Theorem.
+
+If a circle be described on the hypotenuse of a right-angled triangle as diameter, it passes through the vertex of the right angle.
+
+Dem.—Let ABC be a triangle right-angled at B, and let D be the middle point of the hypotenuse AC. Join BD. Complete the rectangle ABCE, and draw the diagonal BE. The diagonals of a rectangle are equal, and bisect each other (Prop. xxxi.); therefore DB is equal to DA and to DC. Hence the circle described with D as centre and DA as radius passes through B, and AC is a diameter of it.
+
+PROP. XXXVIII.—Problem.
+
+To construct a rhombus having a given right line (AB) for one of its sides, and a given angle (C) for one of its angles.
+
+Sol.—At the point A, in the right line AB, make the angle BAD equal to the given angle C (Prop. xxiii.), and take AD equal to AB. With B as centre and BA as radius, and with D as centre and DA as radius, describe two circles meeting in E. Join BE and DE. Then ABED is the rhombus required.
+
+Dem.—Because AB, AD, BE, DE are all equal, being radii of equal circles, the figure ABED is equilateral; and since its opposite sides are equal, it is a parallelogram (Prop. xix.). It has the angle at A equal to the given angle C, and is therefore the rhombus required.
+
+PROP. XXXIX.—Theorem.
+
+The diagonals of a rhombus bisect each other at right angles.
+
+Dem.—Let ABCD be a rhombus, having the diagonals AC and BD meeting in E. Because ABCD is a parallelogram, the diagonals bisect each other (Prop. xxxiv.); hence AE is equal to EC. Now in the triangles ABE and CBE the side BE is common, AE is equal to EC, and AB is equal to BC; therefore the angle AEB is equal to the angle CEB (Prop. viii.). These angles being adjacent, and together equal to two right angles, each is a right angle. Hence the diagonals cut each other at right angles.
+
+PROP. XL.—Theorem.
+
+If a right line be drawn through the middle points of the parallel sides of a trapezium, it bisects the diagonals.
+
+Dem.—Let ABCD be a trapezium, having AB parallel to DC, and let E and F be the middle points of AD and BC. Join EF, and draw the diagonal AC, cutting EF in G. In the triangle ADC, the right line EG, drawn through the middle point E of AD parallel to DC, bisects AC in G (Prop. xiii.). Hence G is the middle point of AC. In like manner it may be shown that EF bisects the other diagonal BD.
+
+PROP. XLI.—Problem.
+
+To find the centre of a given circle.
+
+Sol.—Draw any chord AB in the circle, and bisect it in C. Through C draw DE at right angles to AB, meeting the circle in D and E. Bisect DE in F. Then F is the centre of the circle.
+
+Dem.—Because DE is perpendicular to the chord AB, and bisects it, DE passes through the centre (Prop. i., Book III.). Therefore the centre lies in DE; and since all the right lines from the centre to the circumference are equal, the centre is equidistant from D and E, and consequently is the middle point of DE. Hence F is the centre, which was to be found.
+
+PROP. XLII.—Theorem.
+
+If two right lines cut a system of parallel lines, the segments of the one are proportional to the corresponding segments of the other.
+
+Dem.—Let the right lines AB and CD be cut by the parallels AC, EF, GH, BD, in the points A, E, G, B, and C, F, H, D. Through A draw a right line AK parallel to CD, meeting EF in L, GH in M, and BD in K. Then the figures ACFL, LFHM, MHDK are parallelograms, and AL, LM, MK are equal to CF, FH, HD (Prop. xxxiv.). But by Prop. xxiv. the segments AL, LM, MK are proportional to AE, EG, GB. Therefore the segments AE, EG, GB are proportional to CF, FH, HD.
+
+PROP. XLIII.—Theorem.
+
+The perpendicular from the right angle of a right-angled triangle on the hypotenuse divides the triangle into two triangles similar to the whole and to each other.
+
+Dem.—Let ABC be a triangle right-angled at A, and let AD be perpendicular to the hypotenuse BC. In the triangles ABC and DBA, the angle at B is common, and the angles BAC and BDA are right angles; therefore the triangles are equiangular (Prop. xxxii.), and similar. In like manner the triangles ABC and DAC are similar. Hence the triangles DBA and DAC, each being similar to the triangle ABC, are similar to each other (Prop. xxi., Book VI.).
+
+PROP. XLIV.—Theorem.
+
+The square on the hypotenuse of a right-angled triangle is equal to the squares on the other two sides.
+
+Dem.—Let ABC be a triangle right-angled at A, and let AD be perpendicular to BC. Because the triangles ABC and DBA are similar (Prop. xliii.), BC is to AB as AB is to BD; therefore the square on AB is equal to the rectangle BC . BD. In like manner, because the triangles ABC and DAC are similar, the square on AC is equal to the rectangle BC . DC. Add these results; then the squares on AB and AC are together equal to the rectangle BC . BD together with the rectangle BC . DC, that is, to the square on BC.
+
+PROP. XLV.—Theorem.
+
+If two right lines be at right angles, and two points be taken one on each, the circle on the line joining them as diameter passes through the intersection of the right lines.
+
+Dem.—Let AB and AC be at right angles at A, and let P and Q be points taken on AB and AC respectively. Join PQ. The angle PAQ is a right angle; therefore, by the converse of Prop. vi., the point A lies on the circle described on PQ as diameter. Hence the circle on PQ as diameter passes through A, which was to be proved.
+
+
+PROP. XLVI.—Theorem.
+
+If a right line be drawn from the vertex of a triangle to the middle point of the base, the squares on the two sides are together equal to twice the square on the median, together with twice the square on half the base.
+
+Dem.—Let AD be drawn from the vertex A of the triangle ABC to the middle point D of BC. Draw AE perpendicular to BC. Then the square on AB is equal to the square on AD, together with the square on BD, together with twice the rectangle BD . DE; and the square on AC is equal to the square on AD, together with the square on DC, less twice the rectangle DC . DE (Prop. xii. and xiii., Book II.). Add these results; since BD is equal to DC, the rectangles destroy each other, and the squares on AB and AC are together equal to twice the square on AD, together with twice the square on BD.

@@ -15,12 +15,18 @@ NAMES = {"hr1918_marker": "Ramanujan 1918 (Hardy-Ramanujan paper)", "user_paper"
          "euclid": "Euclid (ancient)", "hilbert": "Hilbert (1899)", "dedekind": "Dedekind (1888)"}
 
 
+NAMES_GENERATED = {"sonnets_claude": "Sonnets written by Claude", "baudelaire_claude": "Baudelaire-style poems written by Claude",
+                   "euclid_claude": "Euclid-style proofs written by Claude"}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dir", required=True)
     ap.add_argument("--n", type=int, default=22)
     ap.add_argument("--out-dir", required=True)
+    ap.add_argument("--generated", action="store_true", help="read the texts written by Claude (data/generated) instead of the proofs")
     a = ap.parse_args()
+    NAMES_USED = NAMES_GENERATED if a.generated else NAMES
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
     from textgeom.embed import Embedder
@@ -29,7 +35,7 @@ def main():
     xe = Embedder("xlm-roberta-base")
     q_table = qm.get_input_embeddings().weight.detach().float().numpy()
     x_table = xe.model.embeddings.word_embeddings.weight.detach().float().numpy()
-    texts = {NAMES[p.stem]: p.read_text(encoding="utf-8") for p in sorted(Path(a.dir).glob("*.txt")) if p.stem in NAMES}
+    texts = {NAMES_USED[p.stem]: p.read_text(encoding="utf-8") for p in sorted(Path(a.dir).glob("*.txt")) if p.stem in NAMES_USED}
     ids = {g: qtok(t, add_special_tokens=False)["input_ids"] for g, t in texts.items()}
     avail = {g: len(range(0, len(i) - SPAN + 1, SPAN)) for g, i in ids.items()}
     n = min(a.n, min(avail.values()) - 1)

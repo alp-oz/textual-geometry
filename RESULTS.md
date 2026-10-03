@@ -202,3 +202,8 @@ Dimension falls then levels off from about 2000 points; it does not grow with mo
 Learn on one half of each work (by text position; Poe by tale), guess the other half, both directions; passages within 256 tokens of the split dropped;
 Wilson 95% ranges and Holm-corrected binomial p-values (24 tests). Path distance (Qwen) 58/80/64% (French/English/proofs), all measures together 48/64/32%,
 surprise 55/45/21%, dimension (XLM-R) 35/33/28%. Ranking unchanged against the leave-one-out test; proofs lose most (path distance Qwen 75 to 64%, XLM-R 67 to 45%). See REPORT.md Result 1b.
+
+## Human against AI-written text (scripts/run_proofs.py --generated, scripts/generated_test.py, examples/generated_test.txt/.csv, data/generated/)
+~7,500 tokens each of sonnets, Baudelaire-style poems and Euclid-style propositions, written by Claude; 22 passages each, same pipeline. Strict test (learn on one half, guess the other).
+Human against Claude: path distance (Qwen) 95/100/86%, surprise 88/95/74%, step length 75/67/64%, dimension and different words not significant (about 50-60%).
+Path distance puts Claude's passages with the work they imitate. Caution: layout differences between the generated and the Gutenberg texts were not controlled. See REPORT.md Result 9.
