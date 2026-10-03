@@ -135,8 +135,18 @@ learn on one half of each text, guess passages of the other half, human against 
 * **The path through the model's space and the predictability can.** The AI text is clearly more predictable to the model (surprise 3.56 against 4.13 for sonnets, 3.00 against 3.44 for Baudelaire, 1.86 against 2.19 for Euclid), which is what one expects from fluent, generic writing.
 * **In style, the AI text still sits next to the work it imitates.** Asked "which work is this from?" with only the real works to choose from, path distance (Qwen) puts all 22 Claude sonnet passages with Shakespeare's sonnets, all 22 Euclid-style passages with Euclid, and the Baudelaire-style passages with Baudelaire (12) or Mallarmé (10).
   The simple measures together are less kind: they call the sonnets "Poe" because the AI text is more predictable than any real author.
-* **Cautions.** (1) One AI, one author of the fake text, written by a model that knew what was being measured. (2) Each fake text is one continuous piece with its own layout (headings, blank lines), and the real texts come from Project Gutenberg with their own layout; part of the path-distance result could come from layout and not from the writing. We did not test this. (3) Only 3 works and about 40 passages per pair.
-Full output: `examples/generated_test.txt`.
+* **Layout check.** The real and the AI texts had different layouts (headings, blank lines, line wrapping), which the model sees as tokens. We removed that: headings and blank lines stripped from the poems (as the real ones were prepared), all whitespace of the Euclid texts made identical, and everything re-measured (21 passages per work):
+
+| Measure | Sonnets | Baudelaire | Euclid |
+|---|---|---|---|
+| Path distance (Qwen) | 92% (before 95%) | 81% (100%) | 80% (86%) |
+| Surprise | 92% (88%) | 93% (95%) | 70% (74%), no longer significant |
+| Dimension (Qwen) | 50% (55%) | 50% (55%) | 65% (55%), not significant |
+| Different words | 62% (60%) | 67% (36%), not significant | 42% (52%), not significant |
+
+  So layout explained part of the path-distance result (most of it for Baudelaire: 100% to 81%) but not all of it. The predictability result barely moved. Qwen dimension and vocabulary still cannot separate the two (XLM-R dimension reaches 76% for Baudelaire and not for the others; with about 40 passages that could be chance).
+* **Remaining cautions.** One AI, one author of the fake text, written by a model that knew what was being measured; only 3 works and about 40 passages per pair; the AI texts are one continuous piece each.
+Full output: `examples/generated_test.txt`, layout check `examples/layout_check.txt` (made with `scripts/layout_clean.py` and `scripts/generated_test.py ... layout`).
 
 ## All the measures we tried
 | Measure | What it asks | Status |

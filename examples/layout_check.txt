@@ -1,0 +1,54 @@
+A. HUMAN AGAINST CLAUDE (learn on one half, guess the other half, both directions; random guessing 50%)
+
+Shakespeare's sonnets: 40 passages tested
+  measure                      right     95% range   p (corrected)
+  all measures together          95%       83%-99%        1.79e-08
+  surprise                       92%       80%-97%        2.14e-07
+  path distance (Qwen)           92%       80%-97%        2.14e-07
+  step length (Qwen)             80%       65%-90%         0.00164
+  dimension (XLM-R)              65%       50%-78%           0.403
+  different words                62%       47%-76%           0.539
+  dimension (Qwen)               50%       35%-65%               1
+  path distance (XLM-R)          50%       35%-65%               1
+
+Baudelaire: 42 passages tested
+  measure                      right     95% range   p (corrected)
+  surprise                       93%       81%-98%        6.48e-08
+  all measures together          86%       72%-93%        2.83e-05
+  path distance (Qwen)           81%       67%-90%        0.000653
+  dimension (XLM-R)              76%       61%-87%         0.00753
+  different words                67%       52%-79%           0.269
+  step length (Qwen)             67%       52%-79%           0.269
+  path distance (XLM-R)          52%       38%-67%               1
+  dimension (Qwen)               50%       36%-64%               1
+
+Euclid: 40 passages tested
+  measure                      right     95% range   p (corrected)
+  path distance (Qwen)           80%       65%-90%         0.00164
+  surprise                       70%       55%-82%           0.124
+  all measures together          68%       52%-80%           0.269
+  step length (Qwen)             68%       52%-80%           0.269
+  path distance (XLM-R)          65%       50%-78%           0.403
+  dimension (Qwen)               65%       50%-78%           0.403
+  dimension (XLM-R)              45%       31%-60%               1
+  different words                42%       29%-58%               1
+
+(p-values corrected for the 24 tests of part A)
+
+C. MEANS (human | Claude)
+                          measure                   human   Claude
+  Shakespeare's sonnets   different words          162.59   158.81
+  Shakespeare's sonnets   surprise (Qwen)            4.13     3.55
+  Shakespeare's sonnets   step length (Qwen)       198.69   206.50
+  Shakespeare's sonnets   dimension (Qwen)          10.30    10.36
+  Shakespeare's sonnets   dimension (XLM-R)         14.85    16.10
+  Baudelaire              different words          177.68   173.90
+  Baudelaire              surprise (Qwen)            3.44     2.99
+  Baudelaire              step length (Qwen)       250.14   244.86
+  Baudelaire              dimension (Qwen)          10.65    11.07
+  Baudelaire              dimension (XLM-R)         16.46    14.40
+  Euclid                  different words          104.05   108.43
+  Euclid                  surprise (Qwen)            2.22     1.86
+  Euclid                  step length (Qwen)       185.60   198.15
+  Euclid                  dimension (Qwen)           8.97    10.00
+  Euclid                  dimension (XLM-R)          8.24     7.90

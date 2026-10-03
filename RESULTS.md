@@ -207,3 +207,8 @@ surprise 55/45/21%, dimension (XLM-R) 35/33/28%. Ranking unchanged against the l
 ~7,500 tokens each of sonnets, Baudelaire-style poems and Euclid-style propositions, written by Claude; 22 passages each, same pipeline. Strict test (learn on one half, guess the other).
 Human against Claude: path distance (Qwen) 95/100/86%, surprise 88/95/74%, step length 75/67/64%, dimension and different words not significant (about 50-60%).
 Path distance puts Claude's passages with the work they imitate. Caution: layout differences between the generated and the Gutenberg texts were not controlled. See REPORT.md Result 9.
+
+## Layout check for the human-against-AI test (scripts/layout_clean.py, scripts/generated_test.py SCRATCH layout, examples/layout_check.txt/.csv)
+Claude's poems given the layout of the real ones (no headings, no blank lines inside poems); the Euclid texts (real and Claude's) with all whitespace collapsed; 21 passages per work, same strict test.
+Path distance (Qwen) 92/81/80% (before 95/100/86%), surprise 92/93/70% (88/95/74%), Qwen dimension 50/50/65% and different words 62/67/42%, not significant.
+Layout explained part of the path-distance gap (most for Baudelaire) but not all; predictability unchanged. See REPORT.md Result 9.

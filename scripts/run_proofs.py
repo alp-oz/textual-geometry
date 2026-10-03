@@ -16,7 +16,8 @@ NAMES = {"hr1918_marker": "Ramanujan 1918 (Hardy-Ramanujan paper)", "user_paper"
 
 
 NAMES_GENERATED = {"sonnets_claude": "Sonnets written by Claude", "baudelaire_claude": "Baudelaire-style poems written by Claude",
-                   "euclid_claude": "Euclid-style proofs written by Claude"}
+                   "euclid_claude": "Euclid-style proofs written by Claude",
+                   "euclid_human": "Euclid (ancient), whitespace normalised"}
 
 
 def main():
